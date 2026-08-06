@@ -17,3 +17,4 @@ Fiecare pagina de raport verifica `sessionStorage.reportsAuth` si redirectioneaz
 
 Sursa datelor: P&L IUNIE 2026 V1.8.1.xlsx (sheet Cashflow, ultima coloana Actual).
 Actualizat: 06.08.2026 (rebuild Pages).
+Update: prima pagina simplificata, cashflow desktop in RO, share nativ pe mobil.
