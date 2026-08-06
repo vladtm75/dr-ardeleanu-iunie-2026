@@ -16,3 +16,4 @@ Publicat prin GitHub Pages: https://vladtm75.github.io/dr-ardeleanu-iunie-2026/
 Fiecare pagina de raport verifica `sessionStorage.reportsAuth` si redirectioneaza catre `index.html` daca nu s-a introdus parola.
 
 Sursa datelor: P&L IUNIE 2026 V1.8.1.xlsx (sheet Cashflow, ultima coloana Actual).
+Actualizat: 06.08.2026 (rebuild Pages).
