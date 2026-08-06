@@ -5,23 +5,25 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
 <title>Vânzări Lite · Iulie 2026 · Dr. Ardeleanu</title>
-<meta name="theme-color" content="#7B1C16"/>
+<!-- Open Graph / link preview -->
 <meta property="og:type" content="website"/>
-<meta property="og:locale" content="ro_RO"/>
 <meta property="og:site_name" content="Dr. Ardeleanu Dental Clinics"/>
-<meta property="og:title" content="Vânzări Iulie 2026 · Dr. Ardeleanu"/>
-<meta property="og:description" content="Vânzări rețea Iulie 2026: 4,55M RON (+61,1% YoY · +10,0% vs buget · LFL +18,2%). YTD Ian–Iul: 27,05M RON (+43,8% YoY · +5,8% vs buget · LFL +14,1%)."/>
-<!-- IMPORTANT pentru preview pe WhatsApp/Telegram: după hosting, înlocuiește cele 2 linkuri og:image / twitter:image de mai jos cu URL-ul ABSOLUT al imaginii, ex: https://domeniul-tau.ro/Hero_Vanzari_Iulie2026_OG.png (urcă fișierul Hero_Vanzari_Iulie2026_OG.png lângă acest HTML). -->
-<meta property="og:image" content="https://vladtm75.github.io/raport-sales-dr-ardeleanu-iulie-mobile/Hero_Vanzari_Iulie2026_OG.png"/>
-<meta property="og:image:secure_url" content="https://vladtm75.github.io/raport-sales-dr-ardeleanu-iulie-mobile/Hero_Vanzari_Iulie2026_OG.png"/>
-<meta property="og:image:type" content="image/png"/>
+<meta property="og:locale" content="ro_RO"/>
+<meta property="og:url" content="https://vladtm75.github.io/dr-ardeleanu-iunie-2026/sales-mobile.html"/>
+<meta property="og:title" content="SALES Analysis · Iulie 2026 · Dr. Ardeleanu"/>
+<meta property="og:description" content="Vânzări rețea Iulie 2026: 4,55M RON (+61,1% YoY · +10,0% vs buget · LFL +18,2%). YTD Ian–Iul: 27,05M RON (+43,8% YoY)."/>
+<meta property="og:image" content="https://vladtm75.github.io/dr-ardeleanu-iunie-2026/Hero_Sales_Jul2026_OG_Square.jpg"/>
+<meta property="og:image:secure_url" content="https://vladtm75.github.io/dr-ardeleanu-iunie-2026/Hero_Sales_Jul2026_OG_Square.jpg"/>
+<meta property="og:image:type" content="image/jpeg"/>
 <meta property="og:image:width" content="1200"/>
-<meta property="og:image:height" content="630"/>
+<meta property="og:image:height" content="1200"/>
 <meta property="og:image:alt" content="Vânzări rețea Dr. Ardeleanu — Iulie 2026, 4,55M RON"/>
+<link rel="image_src" href="https://vladtm75.github.io/dr-ardeleanu-iunie-2026/Hero_Sales_Jul2026_OG_Square.jpg"/>
 <meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:title" content="Vânzări Iulie 2026 · Dr. Ardeleanu"/>
-<meta name="twitter:description" content="Vânzări rețea Iulie 2026: 4,55M RON (+61,1% YoY · LFL +18,2%). YTD 27,05M RON (+43,8%)."/>
-<meta name="twitter:image" content="https://vladtm75.github.io/raport-sales-dr-ardeleanu-iulie-mobile/Hero_Vanzari_Iulie2026_OG.png"/>
+<meta name="twitter:title" content="SALES Analysis · Iulie 2026 · Dr. Ardeleanu"/>
+<meta name="twitter:description" content="Vânzări rețea Iulie 2026: 4,55M RON (+61,1% YoY · +10,0% vs buget · LFL +18,2%). YTD Ian–Iul: 27,05M RON (+43,8% YoY)."/>
+<meta name="twitter:image" content="https://vladtm75.github.io/dr-ardeleanu-iunie-2026/Hero_Sales_Jul2026_OG_Square.jpg"/>
+<meta name="theme-color" content="#7B1C16"/>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet"/>
 <style>
@@ -299,5 +301,65 @@ function setView(v){
 }
 </script>
 <a id="switchbtn" href="sales-desktop.html" style="position:fixed;bottom:20px;right:16px;z-index:9999;background:#7B1C16;color:#fff;font-family:'Poppins',sans-serif;font-size:13px;font-weight:600;padding:10px 16px;border-radius:999px;text-decoration:none;box-shadow:0 4px 16px rgba(0,0,0,0.25);border:1.5px solid #C9A227">🖥️ Varianta desktop</a>
+
+<!-- ── SHARE (WhatsApp / nativ) ── -->
+<style>
+#shareFab{
+  position:fixed;right:16px;bottom:16px;z-index:9998;
+  display:inline-flex;align-items:center;gap:8px;
+  background:#7B1C16;color:#fff;border:none;cursor:pointer;
+  font-family:'Poppins',system-ui,sans-serif;font-size:13px;font-weight:700;
+  padding:12px 18px;border-radius:999px;
+  box-shadow:0 8px 24px rgba(60,20,14,0.34);
+  -webkit-tap-highlight-color:transparent;
+}
+#shareFab:active{transform:scale(0.97);}
+#shareFab svg{width:16px;height:16px;fill:none;stroke:#FBE483;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
+#shareToast{
+  position:fixed;left:50%;transform:translateX(-50%);bottom:78px;z-index:9999;
+  background:#2b1410;color:#F5EDE3;font-family:'Poppins',sans-serif;font-size:12.5px;font-weight:600;
+  padding:10px 16px;border-radius:10px;opacity:0;pointer-events:none;transition:opacity .25s ease;
+  box-shadow:0 8px 24px rgba(0,0,0,0.3);max-width:88vw;text-align:center;
+}
+#shareToast.show{opacity:1;}
+@media print{#shareFab,#shareToast{display:none;}}
+</style>
+<button id="shareFab" type="button" aria-label="Trimite raportul">
+  <svg viewBox="0 0 24 24"><path d="M4 12v7a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-7"/><path d="M12 3v12"/><path d="M8 7l4-4 4 4"/></svg>
+  <span>Trimite</span>
+</button>
+<div id="shareToast"></div>
+<script>
+(function(){
+  var URL_="https://vladtm75.github.io/dr-ardeleanu-iunie-2026/sales-mobile.html", TITLE_="SALES Analysis · Iulie 2026 · Dr. Ardeleanu", TEXT_="Vânzări Dr. Ardeleanu · Iulie 2026 — 4,55M RON (+61,1% YoY, +10,0% vs buget). YTD 27,05M RON.", IMG_="Hero_Sales_Jul2026_OG_Square.jpg";
+  var fab=document.getElementById('shareFab'), toast=document.getElementById('shareToast');
+  function say(m){toast.textContent=m;toast.classList.add('show');setTimeout(function(){toast.classList.remove('show');},2600);}
+  function copy(){
+    var payload=TEXT_+"\n"+URL_;
+    if(navigator.clipboard&&navigator.clipboard.writeText){
+      navigator.clipboard.writeText(payload).then(function(){say('Link copiat — lipește-l în WhatsApp');},function(){say(URL_);});
+    } else { say(URL_); }
+  }
+  fab.addEventListener('click',function(){
+    if(!navigator.share){ copy(); return; }
+    var msg=TEXT_+"\n"+URL_;
+    // 1. încearcă share cu imaginea pătrată atașată (preview mare în WhatsApp)
+    fetch(IMG_,{cache:'force-cache'}).then(function(r){
+      if(!r.ok) throw 0; return r.blob();
+    }).then(function(b){
+      var f=new File([b],'DrArdeleanu.jpg',{type:'image/jpeg'});
+      if(navigator.canShare&&navigator.canShare({files:[f]})){
+        return navigator.share({files:[f],title:TITLE_,text:msg});
+      }
+      throw 0;
+    }).catch(function(){
+      // 2. fallback: doar link + text (WhatsApp generează preview din og:image)
+      return navigator.share({title:TITLE_,text:TEXT_,url:URL_}).catch(function(e){
+        if(e&&e.name==='AbortError') return; copy();
+      });
+    });
+  });
+})();
+</script>
 </body>
 </html>

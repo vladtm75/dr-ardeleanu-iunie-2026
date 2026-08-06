@@ -33,20 +33,20 @@ const LOGO_SRC = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAA2YAAAEdCAIAAADo
 const OVERDRAFT_LIMIT = 1e6;
 const DATA = [
   { m: "Apr 25", cashOpen: 1638828, ebitda: 647326, opCF: 456404, invCF: -205275, finCF: -175332, wcCF: 26371, totalGen: 102168, cashEnd: 1740996, capexRE: 0, capexFitout: -74969, capexEQ: -130306, payTotal: 2529865, payCurrent: 2481654, payPropco: 48211, daysTotal: 45, daysCurrent: 31, daysPropco: 14, netBankDebt: 1356031, fiscalDebt: 790636, totalDebt: 2146667, totalDebtEUR: 429333, odMov: 0, odBal: 0, ilBal: 5e5, ilBalEUR: 1e5, shSpend: 237729, shSpendEUR: 47546 },
-  { m: "May 25", cashOpen: 1740996, ebitda: 803691, opCF: 694151, invCF: -878136, finCF: -153743, wcCF: 683599, totalGen: 345871, cashEnd: 2086867, capexRE: -721534, capexFitout: -125674, capexEQ: -30928, payTotal: 3092156, payCurrent: 2319798, payPropco: 772358, daysTotal: 37, daysCurrent: 25, daysPropco: 11, netBankDebt: 1413746, fiscalDebt: 717949, totalDebt: 2131695, totalDebtEUR: 426339, odMov: 0, odBal: 0, ilBal: 5e5, ilBalEUR: 1e5, shSpend: 207173, shSpendEUR: 41435 },
-  { m: "Jun 25", cashOpen: 2086867, ebitda: 722539, opCF: 588450, invCF: -1173810, finCF: -415130, wcCF: 956682, totalGen: -43808, cashEnd: 2043059, capexRE: 0, capexFitout: -496720, capexEQ: -677090, payTotal: 2009616, payCurrent: 1985259, payPropco: 24357, daysTotal: 33, daysCurrent: 22, daysPropco: 11, netBankDebt: 1822410, fiscalDebt: 668089, totalDebt: 2490499, totalDebtEUR: 498100, odMov: 0, odBal: 0, ilBal: 5e5, ilBalEUR: 1e5, shSpend: 364237, shSpendEUR: 72847 },
-  { m: "Jul 25", cashOpen: 2043059, ebitda: 780095, opCF: 560416, invCF: -1847977, finCF: -801392, wcCF: 2199039, totalGen: 110086, cashEnd: 2153145, capexRE: 0, capexFitout: -1577119, capexEQ: -270858, payTotal: 2893429, payCurrent: 2247579, payPropco: 645850, daysTotal: 56, daysCurrent: 24, daysPropco: 32, netBankDebt: 1850250, fiscalDebt: 618229, totalDebt: 2468479, totalDebtEUR: 493696, odMov: 0, odBal: 0, ilBal: 875e3, ilBalEUR: 175e3, shSpend: 236999, shSpendEUR: 47400 },
+  { m: "Mai 25", cashOpen: 1740996, ebitda: 803691, opCF: 694151, invCF: -878136, finCF: -153743, wcCF: 683599, totalGen: 345871, cashEnd: 2086867, capexRE: -721534, capexFitout: -125674, capexEQ: -30928, payTotal: 3092156, payCurrent: 2319798, payPropco: 772358, daysTotal: 37, daysCurrent: 25, daysPropco: 11, netBankDebt: 1413746, fiscalDebt: 717949, totalDebt: 2131695, totalDebtEUR: 426339, odMov: 0, odBal: 0, ilBal: 5e5, ilBalEUR: 1e5, shSpend: 207173, shSpendEUR: 41435 },
+  { m: "Iun 25", cashOpen: 2086867, ebitda: 722539, opCF: 588450, invCF: -1173810, finCF: -415130, wcCF: 956682, totalGen: -43808, cashEnd: 2043059, capexRE: 0, capexFitout: -496720, capexEQ: -677090, payTotal: 2009616, payCurrent: 1985259, payPropco: 24357, daysTotal: 33, daysCurrent: 22, daysPropco: 11, netBankDebt: 1822410, fiscalDebt: 668089, totalDebt: 2490499, totalDebtEUR: 498100, odMov: 0, odBal: 0, ilBal: 5e5, ilBalEUR: 1e5, shSpend: 364237, shSpendEUR: 72847 },
+  { m: "Iul 25", cashOpen: 2043059, ebitda: 780095, opCF: 560416, invCF: -1847977, finCF: -801392, wcCF: 2199039, totalGen: 110086, cashEnd: 2153145, capexRE: 0, capexFitout: -1577119, capexEQ: -270858, payTotal: 2893429, payCurrent: 2247579, payPropco: 645850, daysTotal: 56, daysCurrent: 24, daysPropco: 32, netBankDebt: 1850250, fiscalDebt: 618229, totalDebt: 2468479, totalDebtEUR: 493696, odMov: 0, odBal: 0, ilBal: 875e3, ilBalEUR: 175e3, shSpend: 236999, shSpendEUR: 47400 },
   { m: "Aug 25", cashOpen: 2153145, ebitda: 661163, opCF: 568196, invCF: -109790, finCF: 103716, wcCF: -1293185, totalGen: -731063, cashEnd: 1422082, capexRE: 0, capexFitout: -9228, capexEQ: -100562, payTotal: 2311554, payCurrent: 2297310, payPropco: 14244, daysTotal: 35, daysCurrent: 26, daysPropco: 9, netBankDebt: 2631716, fiscalDebt: 451446, totalDebt: 3083162, totalDebtEUR: 616632, odMov: 0, odBal: 0, ilBal: 875e3, ilBalEUR: 175e3, shSpend: 682862, shSpendEUR: 136572 },
   { m: "Sep 25", cashOpen: 1422082, ebitda: 868799, opCF: 746060, invCF: -724097, finCF: -223642, wcCF: 268016, totalGen: 66337, cashEnd: 1488419, capexRE: -289928, capexFitout: -155252, capexEQ: -278917, payTotal: 2537441, payCurrent: 2408281, payPropco: 129160, daysTotal: 32, daysCurrent: 23, daysPropco: 9, netBankDebt: 2626541, fiscalDebt: 397446, totalDebt: 3023987, totalDebtEUR: 604797, odMov: 0, odBal: 0, ilBal: 875e3, ilBalEUR: 175e3, shSpend: 222806, shSpendEUR: 44561 },
   { m: "Oct 25", cashOpen: 1488419, ebitda: 1049106, opCF: 746886, invCF: -820352, finCF: 16268, wcCF: 507032, totalGen: 449834, cashEnd: 1938253, capexRE: 0, capexFitout: -797535, capexEQ: -22817, payTotal: 2686611, payCurrent: 2497297, payPropco: 189314, daysTotal: 58, daysCurrent: 23, daysPropco: 36, netBankDebt: 3171171, fiscalDebt: 342203, totalDebt: 3513374, totalDebtEUR: 702675, odMov: 0, odBal: 0, ilBal: 2595e3, ilBalEUR: 519e3, shSpend: 254330, shSpendEUR: 50866 },
-  { m: "Nov 25", cashOpen: 1938253, ebitda: 729920, opCF: 568358, invCF: -825505, finCF: 245395, wcCF: -5640, totalGen: -17392, cashEnd: 1920861, capexRE: 0, capexFitout: -690054, capexEQ: -135451, payTotal: 3057819, payCurrent: 2769355, payPropco: 288464, daysTotal: 37, daysCurrent: 27, daysPropco: 10, netBankDebt: 5965699, fiscalDebt: 286960, totalDebt: 6252659, totalDebtEUR: 1250532, odMov: 0, odBal: 0, ilBal: 3224681, ilBalEUR: 644936, shSpend: 233474, shSpendEUR: 46695 },
+  { m: "Noi 25", cashOpen: 1938253, ebitda: 729920, opCF: 568358, invCF: -825505, finCF: 245395, wcCF: -5640, totalGen: -17392, cashEnd: 1920861, capexRE: 0, capexFitout: -690054, capexEQ: -135451, payTotal: 3057819, payCurrent: 2769355, payPropco: 288464, daysTotal: 37, daysCurrent: 27, daysPropco: 10, netBankDebt: 5965699, fiscalDebt: 286960, totalDebt: 6252659, totalDebtEUR: 1250532, odMov: 0, odBal: 0, ilBal: 3224681, ilBalEUR: 644936, shSpend: 233474, shSpendEUR: 46695 },
   { m: "Dec 25", cashOpen: 1920861, ebitda: 110222, opCF: -44945, invCF: -890361, finCF: 452615, wcCF: -1116265, totalGen: -1598956, cashEnd: 321905, capexRE: -337825, capexFitout: -554736, capexEQ: 2200, payTotal: 2581668, payCurrent: 2455959, payPropco: 125709, daysTotal: 40, daysCurrent: 34, daysPropco: 6, netBankDebt: 6941687, fiscalDebt: 225186, totalDebt: 7166873, totalDebtEUR: 1433375, odMov: 652139, odBal: 652139, ilBal: 4040841, ilBalEUR: 808168, shSpend: 200646, shSpendEUR: 40129 },
-  { m: "Jan 26", cashOpen: 321905, ebitda: 950058, opCF: 873786, invCF: -350217, finCF: -704179, wcCF: 552245, totalGen: 371635, cashEnd: 693540, capexRE: 0, capexFitout: -50614, capexEQ: -299603, payTotal: 2979101, payCurrent: 2852740, payPropco: 126361, daysTotal: 30, daysCurrent: 26, daysPropco: 4, netBankDebt: 6988705, fiscalDebt: 188352, totalDebt: 7177057, totalDebtEUR: 1435411, odMov: 37081, odBal: 689220, ilBal: 4219841, ilBalEUR: 843968, shSpend: 68651, shSpendEUR: 13730 },
+  { m: "Ian 26", cashOpen: 321905, ebitda: 950058, opCF: 873786, invCF: -350217, finCF: -704179, wcCF: 552245, totalGen: 371635, cashEnd: 693540, capexRE: 0, capexFitout: -50614, capexEQ: -299603, payTotal: 2979101, payCurrent: 2852740, payPropco: 126361, daysTotal: 30, daysCurrent: 26, daysPropco: 4, netBankDebt: 6988705, fiscalDebt: 188352, totalDebt: 7177057, totalDebtEUR: 1435411, odMov: 37081, odBal: 689220, ilBal: 4219841, ilBalEUR: 843968, shSpend: 68651, shSpendEUR: 13730 },
   { m: "Feb 26", cashOpen: 693540, ebitda: 834657, opCF: 777382, invCF: -973836, finCF: -152325, wcCF: 673661, totalGen: 324882, cashEnd: 1018422, capexRE: 0, capexFitout: -717020, capexEQ: -256816, payTotal: 3072612, payCurrent: 2530309, payPropco: 542303, daysTotal: 27, daysCurrent: 23, daysPropco: 4, netBankDebt: 8507552, fiscalDebt: 162187, totalDebt: 8669739, totalDebtEUR: 1733948, odMov: 93171, odBal: 782391, ilBal: 4503841, ilBalEUR: 900768, shSpend: 216405, shSpendEUR: 43281 },
   { m: "Mar 26", cashOpen: 1018422, ebitda: 1128656, opCF: 1055378, invCF: -546616, finCF: -579969, wcCF: 190051, totalGen: 118844, cashEnd: 1137266, capexRE: 0, capexFitout: -463586, capexEQ: -83030, payTotal: 2779542, payCurrent: 2329597, payPropco: 449945, daysTotal: 21, daysCurrent: 17, daysPropco: 4, netBankDebt: 8475692, fiscalDebt: 136022, totalDebt: 8611714, totalDebtEUR: 1722343, odMov: -331472, odBal: 450919, ilBal: 4683841, ilBalEUR: 936768, shSpend: 10647, shSpendEUR: 2129 },
   { m: "Apr 26", cashOpen: 1137266, ebitda: 771543, opCF: 638653, invCF: -1185329, finCF: 745569, wcCF: -147311, totalGen: 51582, cashEnd: 1188848, capexRE: -25464, capexFitout: -88124, capexEQ: -1071741, payTotal: 3470222, payCurrent: 3125824, payPropco: 344398, daysTotal: 43, daysCurrent: 26, daysPropco: 17, netBankDebt: 8418320, fiscalDebt: 360279, totalDebt: 8778599, totalDebtEUR: 1755720, odMov: 201317, odBal: 652236, ilBal: 4758841, ilBalEUR: 951768, shSpend: 245505, shSpendEUR: 49101 },
-  { m: "May 26", cashOpen: 1188848, ebitda: 1078707, opCF: 1001967, invCF: -883859, finCF: -1002668, wcCF: 193406, totalGen: -691154, cashEnd: 497694, capexRE: -488462, capexFitout: -390719, capexEQ: -4678, payTotal: 2988572, payCurrent: 2777336, payPropco: 211236, daysTotal: 26, daysCurrent: 21, daysPropco: 5, netBankDebt: 8365652, fiscalDebt: 330256, totalDebt: 8695908, totalDebtEUR: 1739182, odMov: -343489, odBal: 308747, ilBal: 4987841, ilBalEUR: 997568, shSpend: 290319, shSpendEUR: 58064 },
-  { m: "Jun 26", cashOpen: 497694, ebitda: 1096721, opCF: 915766, invCF: -374873, finCF: -91755, wcCF: -443531, totalGen: 5607, cashEnd: 503301, capexRE: -290004, capexFitout: -84869, capexEQ: 0, payTotal: 1897235, payCurrent: 1788179, payPropco: 109056, daysTotal: 34, daysCurrent: 13, daysPropco: 21, netBankDebt: 8313491, fiscalDebt: 300233, totalDebt: 8613724, totalDebtEUR: 1722745, odMov: 226269, odBal: 535016, ilBal: 4987841, ilBalEUR: 997568, shSpend: 220647, shSpendEUR: 44129 }
+  { m: "Mai 26", cashOpen: 1188848, ebitda: 1078707, opCF: 1001967, invCF: -883859, finCF: -1002668, wcCF: 193406, totalGen: -691154, cashEnd: 497694, capexRE: -488462, capexFitout: -390719, capexEQ: -4678, payTotal: 2988572, payCurrent: 2777336, payPropco: 211236, daysTotal: 26, daysCurrent: 21, daysPropco: 5, netBankDebt: 8365652, fiscalDebt: 330256, totalDebt: 8695908, totalDebtEUR: 1739182, odMov: -343489, odBal: 308747, ilBal: 4987841, ilBalEUR: 997568, shSpend: 290319, shSpendEUR: 58064 },
+  { m: "Iun 26", cashOpen: 497694, ebitda: 1096721, opCF: 915766, invCF: -374873, finCF: -91755, wcCF: -443531, totalGen: 5607, cashEnd: 503301, capexRE: -290004, capexFitout: -84869, capexEQ: 0, payTotal: 1897235, payCurrent: 1788179, payPropco: 109056, daysTotal: 34, daysCurrent: 13, daysPropco: 21, netBankDebt: 8313491, fiscalDebt: 300233, totalDebt: 8613724, totalDebtEUR: 1722745, odMov: 226269, odBal: 535016, ilBal: 4987841, ilBalEUR: 997568, shSpend: 220647, shSpendEUR: 44129 }
 ];
 const fmtRON = (v, opts = {}) => {
   if (v == null || isNaN(v)) return "\u2014";
@@ -61,7 +61,7 @@ const fmtRONfull = (v) => {
   if (v == null || isNaN(v)) return "\u2014";
   const sign = v < 0 ? "-" : "";
   const abs = Math.abs(v);
-  return sign + abs.toLocaleString("en-US", { maximumFractionDigits: 0 });
+  return sign + abs.toLocaleString("ro-RO", { maximumFractionDigits: 0 });
 };
 const fmtPct = (v, dp = 1) => v == null ? "\u2014" : (v >= 0 ? "+" : "") + v.toFixed(dp) + "%";
 function KPI({ label, value, sub, accent = C.primary, trend, trendType = "positive" }) {
@@ -94,7 +94,7 @@ function KPI({ label, value, sub, accent = C.primary, trend, trendType = "positi
       " ",
       fmtPct(trend),
       " ",
-      /* @__PURE__ */ jsx("span", { style: { color: C.muted, fontWeight: 400 }, children: "vs prev. month" })
+      /* @__PURE__ */ jsx("span", { style: { color: C.muted, fontWeight: 400 }, children: "vs luna anterioară" })
     ] })
   ] });
 }
@@ -162,12 +162,12 @@ function CustomTooltip({ active, payload, label, valueFormatter, suffix }) {
 }
 function Waterfall({ row }) {
   const steps = [
-    { label: "Cash Opening", value: row.cashOpen, type: "total" },
-    { label: "Operating CF", value: row.opCF, type: "in" },
-    { label: "Investing CF", value: row.invCF, type: "out" },
-    { label: "Financing CF", value: row.finCF, type: "out" },
-    { label: "Working Cap.", value: row.wcCF, type: row.wcCF >= 0 ? "in" : "out" },
-    { label: "Cash Closing", value: row.cashEnd, type: "total" }
+    { label: "Sold inițial", value: row.cashOpen, type: "total" },
+    { label: "CF operațional", value: row.opCF, type: "in" },
+    { label: "CF investiții", value: row.invCF, type: "out" },
+    { label: "CF finanțare", value: row.finCF, type: "out" },
+    { label: "Capital de lucru", value: row.wcCF, type: row.wcCF >= 0 ? "in" : "out" },
+    { label: "Sold final", value: row.cashEnd, type: "total" }
   ];
   let running = 0;
   const barData = steps.map((s, i) => {
@@ -313,7 +313,7 @@ function CashflowDashboard() {
           margin: 0,
           lineHeight: 1.2,
           letterSpacing: 0.2
-        }, children: "June 2026 CASHFLOW Analysis \u2013 Dr. Ardeleanu" }),
+        }, children: "Analiza Cashflow \u00b7 Iunie 2026 \u2013 Dr. Ardeleanu" }),
         /* @__PURE__ */ jsx("div", { style: {
           display: "inline-block",
           background: C.yellow,
@@ -325,15 +325,15 @@ function CashflowDashboard() {
           fontWeight: 700,
           letterSpacing: 1.8,
           textTransform: "uppercase"
-        }, children: "Actual Jun 2026" })
+        }, children: "Realizat Iun 2026" })
       ] }),
       /* @__PURE__ */ jsxs("div", { style: { display: "flex", gap: 14, marginBottom: 18, flexWrap: "wrap" }, children: [
         /* @__PURE__ */ jsx(
           KPI,
           {
-            label: "Cash on hand",
+            label: "Numerar disponibil",
             value: fmtRONfull(latest.cashEnd) + " RON",
-            sub: `vs ${fmtRONfull(prev.cashEnd)} prior month`,
+            sub: `vs ${fmtRONfull(prev.cashEnd)} luna anterioară`,
             accent: C.primary,
             trend: cashMoM
           }
@@ -343,7 +343,7 @@ function CashflowDashboard() {
           {
             label: "GOURP EBITDA",
             value: fmtRONfull(latest.ebitda) + " RON",
-            sub: `Second-best month in window \xB7 vs avg ${fmtRON(totals.ebitda / DATA.length)}`,
+            sub: `A doua cea mai bun\u0103 lun\u0103 din fereastr\u0103 \xB7 vs media ${fmtRON(totals.ebitda / DATA.length)}`,
             accent: C.amberGold,
             trend: ebitdaMoM
           }
@@ -351,9 +351,9 @@ function CashflowDashboard() {
         /* @__PURE__ */ jsx(
           KPI,
           {
-            label: "Days of Payables",
-            value: latest.daysTotal + " days",
-            sub: `vs 15-mo avg ${avgDaysTotal.toFixed(0)}d \xB7 core suppliers at a window-low ${latest.daysCurrent}d`,
+            label: "Zile de plată furnizori",
+            value: latest.daysTotal + " zile",
+            sub: `vs media pe 15 luni ${avgDaysTotal.toFixed(0)}z \xB7 furnizori comerciali la minimul ferestrei ${latest.daysCurrent}z`,
             accent: C.terracotta,
             trend: latest.daysTotal - prev.daysTotal,
             trendType: "negative"
@@ -362,9 +362,9 @@ function CashflowDashboard() {
         /* @__PURE__ */ jsx(
           KPI,
           {
-            label: "Total Debt",
+            label: "Datorie totală",
             value: "\u20AC" + fmtRONfull(latest.totalDebtEUR),
-            sub: `${fmtRONfull(latest.totalDebt)} RON \xB7 ${(latest.totalDebt / ttmEbitda).toFixed(2)}x Net Debt/EBITDA`,
+            sub: `${fmtRONfull(latest.totalDebt)} RON \xB7 ${(latest.totalDebt / ttmEbitda).toFixed(2)}\u00d7 datorie netă/EBITDA`,
             accent: C.text,
             trend: (latest.totalDebt - prev.totalDebt) / prev.totalDebt * 100,
             trendType: "negative"
@@ -373,9 +373,9 @@ function CashflowDashboard() {
         /* @__PURE__ */ jsx(
           KPI,
           {
-            label: "Overdraft Utilisation",
+            label: "Utilizare overdraft",
             value: (latest.odBal / OVERDRAFT_LIMIT * 100).toFixed(1) + "%",
-            sub: `${fmtRONfull(latest.odBal)} of ${fmtRON(OVERDRAFT_LIMIT)} drawn \xB7 reserve ${fmtRON(OVERDRAFT_LIMIT - latest.odBal)}`,
+            sub: `${fmtRONfull(latest.odBal)} din ${fmtRON(OVERDRAFT_LIMIT)} tras \xB7 rezerv\u0103 ${fmtRON(OVERDRAFT_LIMIT - latest.odBal)}`,
             accent: C.amberGold,
             trend: latest.odBal / OVERDRAFT_LIMIT * 100 - prev.odBal / OVERDRAFT_LIMIT * 100,
             trendType: "negative"
@@ -389,93 +389,93 @@ function CashflowDashboard() {
         marginBottom: 18,
         borderRadius: 2
       }, children: [
-        /* @__PURE__ */ jsx("div", { style: { fontSize: 10, fontWeight: 600, letterSpacing: 1.5, textTransform: "uppercase", color: C.primary, marginBottom: 4 }, children: "Executive read" }),
+        /* @__PURE__ */ jsx("div", { style: { fontSize: 10, fontWeight: 600, letterSpacing: 1.5, textTransform: "uppercase", color: C.primary, marginBottom: 4 }, children: "Concluzia executiv\u0103" }),
         /* @__PURE__ */ jsxs("div", { style: { fontSize: 13, lineHeight: 1.55, color: C.text }, children: [
-          /* @__PURE__ */ jsx("strong", { children: "June stabilises the cash line and delivers the fastest core-supplier payment in the window" }),
-          " \u2014 EBITDA edges up to ",
+          /* @__PURE__ */ jsx("strong", { children: "Iunie stabilizeaz\u0103 linia de numerar \u0219i aduce cea mai rapid\u0103 plat\u0103 a furnizorilor comerciali din fereastr\u0103" }),
+          " \u2014 EBITDA urc\u0103 la ",
           fmtRONfull(latest.ebitda),
           " RON (",
           fmtPct(ebitdaMoM),
           " MoM, ",
           /* @__PURE__ */ jsxs("strong", { children: [
             fmtPct((latest.ebitda - yearAgo.ebitda) / yearAgo.ebitda * 100),
-            " ahead of June 2025"
+            " peste iunie 2025"
           ] }),
-          "), the second-best month in the window, converting into ",
+          "), a doua cea mai bun\u0103 lun\u0103 din fereastr\u0103, convertit\u0103 \u00een ",
           fmtRONfull(latest.opCF),
-          " RON of operating cash flow at an ",
+          " RON de cash flow opera\u021bional, la o rat\u0103 de ",
           (latest.opCF / latest.ebitda * 100).toFixed(0),
-          "% rate (",
+          "% (",
           fmtPct(opCFYoY),
-          " above June 2025). That operating strength is almost entirely consumed by working capital: total payables are cut ",
+          " peste iunie 2025). Aceast\u0103 for\u021b\u0103 opera\u021bional\u0103 este aproape integral consumat\u0103 de capitalul de lucru: furnizorii totali scad cu ",
           fmtPct((latest.payTotal - prev.payTotal) / prev.payTotal * 100),
           " to ",
           /* @__PURE__ */ jsxs("strong", { children: [
             fmtRON(latest.payTotal),
             " RON"
           ] }),
-          " \u2014 the lowest balance in the 15-month window \u2014 absorbing ",
+          " \u2014 cel mai mic sold din fereastra de 15 luni \u2014 absorbind ",
           fmtRONfull(Math.abs(latest.wcCF)),
-          " RON of cash and pulling the current portion down to ",
+          " RON de numerar \u0219i cobor\u00e2nd partea comercial\u0103 la ",
           /* @__PURE__ */ jsxs("strong", { children: [
             latest.daysCurrent,
-            " days"
+            " zile"
           ] }),
-          ", a window low (total days read ",
+          ", minimul ferestrei (totalul afi\u0219eaz\u0103 ",
           latest.daysTotal,
-          " only because the PROPCO leg stretches to ",
+          " doar pentru c\u0103 componenta PROPCO se prelunge\u0219te la ",
           latest.daysPropco,
-          "). Investing moderates to ",
+          "). Investi\u021biile se modereaz\u0103 la ",
           fmtRONfull(Math.abs(latest.invCF)),
-          " RON \u2014 a further ",
+          " RON \u2014 \u00eenc\u0103 ",
           fmtRON(Math.abs(latest.capexRE)),
-          " RON of real estate plus ",
+          " RON imobiliare plus ",
           fmtRON(Math.abs(latest.capexFitout)),
-          " RON of fitout, with no equipment spend \u2014 and financing is a near-neutral ",
+          " RON fitout, f\u0103r\u0103 cheltuieli de echipamente \u2014 iar finan\u021barea este aproape neutr\u0103, ",
           fmtRONfull(latest.finCF),
-          " RON as a ",
+          " RON, o ",
           fmtRONfull(Math.abs(latest.odMov)),
-          " RON overdraft drawdown funds dividends of ",
+          " RON tragere de overdraft finan\u021b\u00e2nd dividende de ",
           fmtRON(latest.shSpend),
-          " RON. Net cash generation is a flat ",
+          " RON. Generarea net\u0103 de numerar este plat\u0103, ",
           fmtRONfull(latest.totalGen),
-          " RON and cash on hand holds at ",
+          " RON, iar numerarul disponibil se men\u021bine la ",
           /* @__PURE__ */ jsxs("strong", { children: [
             fmtRONfull(latest.cashEnd),
             " RON"
           ] }),
           " (",
           fmtPct(cashMoM),
-          " MoM) after May's drawdown. The cost of that stability is overdraft utilisation rising to ",
+          " MoM) dup\u0103 sc\u0103derea din mai. Costul acestei stabilit\u0103\u021bi este cre\u0219terea utiliz\u0103rii overdraftului la ",
           (latest.odBal / OVERDRAFT_LIMIT * 100).toFixed(0),
-          "% of facility (from ",
+          "% din linie (de la ",
           (prev.odBal / OVERDRAFT_LIMIT * 100).toFixed(0),
-          "% in May) \u2014 the balance-sheet line to watch; total debt is otherwise flat at ",
+          "% \u00een mai) \u2014 linia de bilan\u021b de urm\u0103rit; \u00een rest, datoria total\u0103 r\u0103m\u00e2ne plat\u0103 la ",
           /* @__PURE__ */ jsxs("strong", { children: [
             "\u20AC",
             fmtRONfull(latest.totalDebtEUR)
           ] }),
           " (",
           (latest.totalDebt / ttmEbitda).toFixed(2),
-          "x Net Debt/TTM EBITDA), with fiscal debt down to ",
+          "\u00d7 datorie net\u0103/EBITDA TTM), cu datoria fiscal\u0103 sc\u0103zut\u0103 la ",
           fmtRON(latest.fiscalDebt),
           " RON (",
           fmtPct(fiscalDebtChange),
-          " below the start of the window) and no new intercompany deployment this month."
+          " sub nivelul de la \u00eenceputul ferestrei) \u0219i f\u0103r\u0103 alocare nou\u0103 intra-grup luna aceasta."
         ] })
       ] }),
       /* @__PURE__ */ jsxs(
         Section,
         {
-          kicker: "Section 01 \xB7 Latest Month",
-          title: "June 2026 \u2014 Cash Bridge",
-          subtitle: "From opening cash on 1 June to closing cash on 30 June. Operations generate 0.92M RON; investing absorbs 0.37M, split between a 0.29M real-estate purchase and 0.08M of fitout, with no equipment spend; financing is near-neutral at -0.09M as a 0.23M overdraft drawdown offsets 0.22M of dividends and scheduled loan service; working capital absorbs 0.44M as total payables are cut to the lowest balance in the window. Net result is a broadly flat +0.01M for the month \u2014 cash holds its level after May\u2019s -0.69M contraction.",
+          kicker: "Sec\u021biunea 01 \xB7 Luna curent\u0103",
+          title: "Iunie 2026 \u2014 Cash Bridge",
+          subtitle: "De la soldul de numerar din 1 iunie la soldul de \u00eenchidere din 30 iunie. Opera\u021biunile genereaz\u0103 0,92M RON; investi\u021biile absorb 0,37M, \u00eemp\u0103r\u021bite \u00eentre o achizi\u021bie imobiliar\u0103 de 0,29M \u0219i 0,08M fitout, f\u0103r\u0103 cheltuieli de echipamente; finan\u021barea este aproape neutr\u0103, la -0,09M, o tragere de overdraft de 0,23M compens\u00e2nd 0,22M de dividende \u0219i rate de credit; capitalul de lucru absoarbe 0,44M pe m\u0103sur\u0103 ce furnizorii totali scad la cel mai mic sold din fereastr\u0103. Rezultatul net este practic plat, +0,01M pe lun\u0103 \u2014 numerarul \u00ee\u0219i men\u021bine nivelul dup\u0103 contrac\u021bia de -0,69M din mai.",
           children: [
             /* @__PURE__ */ jsx(Waterfall, { row: latest }),
             /* @__PURE__ */ jsxs("div", { style: { display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 12, marginTop: 18, paddingTop: 14, borderTop: `1px solid ${C.border}` }, children: [
-              /* @__PURE__ */ jsx(AggregateBox, { color: C.olive, label: "Net inflows", value: fmtRONfull(latest.opCF + latest.wcCF) + " RON", sub: "Operations + Working capital" }),
-              /* @__PURE__ */ jsx(AggregateBox, { color: C.terracotta, label: "Net outflows", value: fmtRONfull(latest.invCF + latest.finCF) + " RON", sub: "Investing + Financing" }),
-              /* @__PURE__ */ jsx(AggregateBox, { color: C.primary, label: "Net change", value: fmtRONfull(latest.totalGen) + " RON", sub: `Closing ${fmtRONfull(latest.cashEnd)} RON` })
+              /* @__PURE__ */ jsx(AggregateBox, { color: C.olive, label: "Intrări nete", value: fmtRONfull(latest.opCF + latest.wcCF) + " RON", sub: "Operațional + capital de lucru" }),
+              /* @__PURE__ */ jsx(AggregateBox, { color: C.terracotta, label: "Ieșiri nete", value: fmtRONfull(latest.invCF + latest.finCF) + " RON", sub: "Investiții + finanțare" }),
+              /* @__PURE__ */ jsx(AggregateBox, { color: C.primary, label: "Variație netă", value: fmtRONfull(latest.totalGen) + " RON", sub: `Sold final ${fmtRONfull(latest.cashEnd)} RON` })
             ] })
           ]
         }
@@ -483,9 +483,9 @@ function CashflowDashboard() {
       /* @__PURE__ */ jsxs(
         Section,
         {
-          kicker: "Section 02 \xB7 Liquidity",
-          title: "Cash Position Trajectory",
-          subtitle: "Closing cash balance by month with monthly net cash generation. The December 2025 trough reflects a one-off EBITDA dip combined with heavy working-capital absorption. After May 2026\u2019s sharp drawdown, June 2026 stabilises the balance at roughly the same level \u2014 net generation is essentially flat as strong operating cash is redeployed into payables reduction and real estate.",
+          kicker: "Sec\u021biunea 02 \xB7 Lichiditate",
+          title: "Traiectoria pozi\u021biei de numerar",
+          subtitle: "Soldul de numerar la sf\u00e2r\u0219it de lun\u0103, cu generarea net\u0103 lunar\u0103 de numerar. Minimul din decembrie 2025 reflect\u0103 o sc\u0103dere punctual\u0103 de EBITDA combinat\u0103 cu o absorb\u021bie masiv\u0103 de capital de lucru. Dup\u0103 sc\u0103derea abrupt\u0103 din mai 2026, iunie 2026 stabilizeaz\u0103 soldul aproximativ la acela\u0219i nivel \u2014 generarea net\u0103 este practic plat\u0103, numerarul opera\u021bional puternic fiind redirec\u021bionat c\u0103tre reducerea furnizorilor \u0219i imobiliare.",
           children: [
             /* @__PURE__ */ jsx(ResponsiveContainer, { width: "100%", height: 320, children: /* @__PURE__ */ jsxs(ComposedChart, { data: DATA, margin: { top: 10, right: 20, left: 0, bottom: 5 }, children: [
               /* @__PURE__ */ jsx(CartesianGrid, { strokeDasharray: "2 4", stroke: C.border, vertical: false }),
@@ -497,7 +497,7 @@ function CashflowDashboard() {
                   tickFormatter: fmtRON,
                   tickLine: false,
                   axisLine: { stroke: C.border },
-                  label: { value: "Cash (RON)", angle: -90, position: "insideLeft", style: { fontFamily: FONT, fontSize: 11, fill: C.muted } }
+                  label: { value: "Numerar (RON)", angle: -90, position: "insideLeft", style: { fontFamily: FONT, fontSize: 11, fill: C.muted } }
                 }
               ),
               /* @__PURE__ */ jsx(
@@ -508,20 +508,20 @@ function CashflowDashboard() {
                   tickFormatter: fmtRON,
                   tickLine: false,
                   axisLine: { stroke: C.border },
-                  label: { value: "Net cash generation (RON)", angle: 90, position: "insideRight", style: { fontFamily: FONT, fontSize: 11, fill: C.muted } }
+                  label: { value: "Generare netă de numerar (RON)", angle: 90, position: "insideRight", style: { fontFamily: FONT, fontSize: 11, fill: C.muted } }
                 }
               ),
               /* @__PURE__ */ jsx(Tooltip, { content: /* @__PURE__ */ jsx(CustomTooltip, {}) }),
               /* @__PURE__ */ jsx(Legend, { wrapperStyle: { paddingTop: 10, fontFamily: FONT } }),
               /* @__PURE__ */ jsx(ReferenceLine, { yAxisId: "right", y: 0, stroke: C.muted, strokeWidth: 1 }),
-              /* @__PURE__ */ jsx(Bar, { yAxisId: "right", dataKey: "totalGen", name: "Net cash generation", radius: [2, 2, 0, 0], children: DATA.map((d, i) => /* @__PURE__ */ jsx(Cell, { fill: d.totalGen >= 0 ? C.olive : C.terracotta }, i)) }),
+              /* @__PURE__ */ jsx(Bar, { yAxisId: "right", dataKey: "totalGen", name: "Generare netă de numerar", radius: [2, 2, 0, 0], children: DATA.map((d, i) => /* @__PURE__ */ jsx(Cell, { fill: d.totalGen >= 0 ? C.olive : C.terracotta }, i)) }),
               /* @__PURE__ */ jsx(
                 Line,
                 {
                   yAxisId: "left",
                   type: "monotone",
                   dataKey: "cashEnd",
-                  name: "Cash on hand (closing)",
+                  name: "Numerar disponibil (sold final)",
                   stroke: C.primary,
                   strokeWidth: 2.5,
                   dot: { r: 4, fill: C.primary, strokeWidth: 0 },
@@ -532,9 +532,9 @@ function CashflowDashboard() {
             /* @__PURE__ */ jsxs("div", { style: { display: "flex", gap: 24, marginTop: 16, paddingTop: 14, borderTop: `1px solid ${C.border}`, flexWrap: "wrap" }, children: [
               /* @__PURE__ */ jsx(MiniStat, { label: "15-mo opening", value: fmtRONfull(DATA[0].cashOpen) + " RON" }),
               /* @__PURE__ */ jsx(MiniStat, { label: "15-mo closing", value: fmtRONfull(latest.cashEnd) + " RON" }),
-              /* @__PURE__ */ jsx(MiniStat, { label: "Net change", value: fmtRONfull(latest.cashEnd - DATA[0].cashOpen) + " RON", accent: true }),
-              /* @__PURE__ */ jsx(MiniStat, { label: "Peak (Jul 25)", value: fmtRONfull(2153145) + " RON" }),
-              /* @__PURE__ */ jsx(MiniStat, { label: "Trough (Dec 25)", value: fmtRONfull(321905) + " RON" })
+              /* @__PURE__ */ jsx(MiniStat, { label: "Variație netă", value: fmtRONfull(latest.cashEnd - DATA[0].cashOpen) + " RON", accent: true }),
+              /* @__PURE__ */ jsx(MiniStat, { label: "Vârf (Iul 25)", value: fmtRONfull(2153145) + " RON" }),
+              /* @__PURE__ */ jsx(MiniStat, { label: "Minim (Dec 25)", value: fmtRONfull(321905) + " RON" })
             ] })
           ]
         }
@@ -542,9 +542,9 @@ function CashflowDashboard() {
       /* @__PURE__ */ jsxs(
         Section,
         {
-          kicker: "Section 03 \xB7 Working Capital \xB7 Payables",
-          title: "Total Payables & Days of Payables",
-          subtitle: "Bars: total payables (OPCO + PROPCO) in RON. Line: days of payables outstanding. Lower days = faster supplier payment = healthier supplier relationships and tighter operational discipline.",
+          kicker: "Sec\u021biunea 03 \xB7 Capital de lucru \xB7 Furnizori",
+          title: "Furnizori totali \u0219i zile de plat\u0103",
+          subtitle: "Bare: furnizori totali (OPCO + PROPCO) \u00een RON. Linie: zile de plat\u0103 a furnizorilor. Mai pu\u021bine zile = plat\u0103 mai rapid\u0103 = rela\u021bii mai s\u0103n\u0103toase cu furnizorii \u0219i disciplin\u0103 opera\u021bional\u0103 mai bun\u0103.",
           children: [
             /* @__PURE__ */ jsx(ResponsiveContainer, { width: "100%", height: 320, children: /* @__PURE__ */ jsxs(ComposedChart, { data: DATA, margin: { top: 10, right: 20, left: 0, bottom: 5 }, children: [
               /* @__PURE__ */ jsx(CartesianGrid, { strokeDasharray: "2 4", stroke: C.border, vertical: false }),
@@ -556,7 +556,7 @@ function CashflowDashboard() {
                   tickFormatter: fmtRON,
                   tickLine: false,
                   axisLine: { stroke: C.border },
-                  label: { value: "Payables (RON)", angle: -90, position: "insideLeft", style: { fontFamily: FONT, fontSize: 11, fill: C.muted } }
+                  label: { value: "Furnizori (RON)", angle: -90, position: "insideLeft", style: { fontFamily: FONT, fontSize: 11, fill: C.muted } }
                 }
               ),
               /* @__PURE__ */ jsx(
@@ -567,7 +567,7 @@ function CashflowDashboard() {
                   tickLine: false,
                   axisLine: { stroke: C.border },
                   domain: [0, "dataMax + 10"],
-                  label: { value: "Days of Payables", angle: 90, position: "insideRight", style: { fontFamily: FONT, fontSize: 11, fill: C.muted } }
+                  label: { value: "Zile de plată furnizori", angle: 90, position: "insideRight", style: { fontFamily: FONT, fontSize: 11, fill: C.muted } }
                 }
               ),
               /* @__PURE__ */ jsx(
@@ -590,22 +590,22 @@ function CashflowDashboard() {
                           /* @__PURE__ */ jsx("span", { style: { width: 8, height: 8, background: p.color, display: "inline-block", borderRadius: 1 } }),
                           p.name
                         ] }),
-                        /* @__PURE__ */ jsx("span", { style: { fontWeight: 600 }, children: p.dataKey === "daysTotal" ? p.value + " days" : fmtRONfull(p.value) + " RON" })
+                        /* @__PURE__ */ jsx("span", { style: { fontWeight: 600 }, children: p.dataKey === "daysTotal" ? p.value + " zile" : fmtRONfull(p.value) + " RON" })
                       ] }, i))
                     ] });
                   }
                 }
               ),
               /* @__PURE__ */ jsx(Legend, { wrapperStyle: { paddingTop: 10, fontFamily: FONT } }),
-              /* @__PURE__ */ jsx(Bar, { yAxisId: "left", dataKey: "payCurrent", stackId: "p", name: "Current payables", fill: C.primary, radius: [0, 0, 0, 0] }),
-              /* @__PURE__ */ jsx(Bar, { yAxisId: "left", dataKey: "payPropco", stackId: "p", name: "PROPCO payables", fill: C.terracotta, radius: [2, 2, 0, 0] }),
+              /* @__PURE__ */ jsx(Bar, { yAxisId: "left", dataKey: "payCurrent", stackId: "p", name: "Furnizori comerciali", fill: C.primary, radius: [0, 0, 0, 0] }),
+              /* @__PURE__ */ jsx(Bar, { yAxisId: "left", dataKey: "payPropco", stackId: "p", name: "Furnizori PROPCO", fill: C.terracotta, radius: [2, 2, 0, 0] }),
               /* @__PURE__ */ jsx(
                 Line,
                 {
                   yAxisId: "right",
                   type: "monotone",
                   dataKey: "daysTotal",
-                  name: "Days of payables",
+                  name: "Zile de plată",
                   stroke: C.amberGold,
                   strokeWidth: 2.5,
                   dot: { r: 4, fill: C.amberGold, strokeWidth: 0 },
@@ -614,11 +614,11 @@ function CashflowDashboard() {
               )
             ] }) }),
             /* @__PURE__ */ jsxs("div", { style: { display: "grid", gridTemplateColumns: "repeat(5, 1fr)", gap: 12, marginTop: 16, paddingTop: 14, borderTop: `1px solid ${C.border}` }, children: [
-              /* @__PURE__ */ jsx(AggregateBox, { color: C.primary, label: "Total Payables Jun 26", value: fmtRONfull(latest.payTotal), sub: "OPCO + PROPCO" }),
-              /* @__PURE__ */ jsx(AggregateBox, { color: C.text, label: "vs May 26", value: fmtPct((latest.payTotal - prev.payTotal) / prev.payTotal * 100), sub: `\u0394 ${fmtRON(latest.payTotal - prev.payTotal)} RON` }),
-              /* @__PURE__ */ jsx(AggregateBox, { color: C.amberGold, label: "Days of Payables", value: latest.daysTotal + " days", sub: `${latest.daysTotal - prev.daysTotal >= 0 ? "+" : ""}${latest.daysTotal - prev.daysTotal}d MoM \xB7 PROPCO leg stretches` }),
-              /* @__PURE__ */ jsx(AggregateBox, { color: C.olive, label: "vs 15-mo avg", value: (latest.daysTotal - avgDaysTotal).toFixed(0) + " days", sub: `Avg ${avgDaysTotal.toFixed(0)} days` }),
-              /* @__PURE__ */ jsx(AggregateBox, { color: C.terracotta, label: "Current portion", value: fmtRONfull(latest.payCurrent), sub: `${latest.daysCurrent} days \xB7 window-low, core suppliers` })
+              /* @__PURE__ */ jsx(AggregateBox, { color: C.primary, label: "Furnizori totali Iun 26", value: fmtRONfull(latest.payTotal), sub: "OPCO + PROPCO" }),
+              /* @__PURE__ */ jsx(AggregateBox, { color: C.text, label: "vs Mai 26", value: fmtPct((latest.payTotal - prev.payTotal) / prev.payTotal * 100), sub: `\u0394 ${fmtRON(latest.payTotal - prev.payTotal)} RON` }),
+              /* @__PURE__ */ jsx(AggregateBox, { color: C.amberGold, label: "Zile de plată furnizori", value: latest.daysTotal + " zile", sub: `${latest.daysTotal - prev.daysTotal >= 0 ? "+" : ""}${latest.daysTotal - prev.daysTotal}z MoM \xB7 componenta PROPCO se prelunge\u0219te` }),
+              /* @__PURE__ */ jsx(AggregateBox, { color: C.olive, label: "vs media pe 15 luni", value: (latest.daysTotal - avgDaysTotal).toFixed(0) + " zile", sub: `Medie ${avgDaysTotal.toFixed(0)} zile` }),
+              /* @__PURE__ */ jsx(AggregateBox, { color: C.terracotta, label: "Parte comercială", value: fmtRONfull(latest.payCurrent), sub: `${latest.daysCurrent} zile \xB7 minim fereastr\u0103, furnizori comerciali` })
             ] })
           ]
         }
@@ -626,9 +626,9 @@ function CashflowDashboard() {
       /* @__PURE__ */ jsxs(
         Section,
         {
-          kicker: "Section 04 \xB7 Capital Structure",
-          title: "Bank Debt Position & Composition",
-          subtitle: "Total debt evolution split between Net Bank Debt (expansion financing) and Fiscal Debt (tax obligations). Bank debt has scaled with the network rollout; fiscal debt has been steadily paid down. Leverage is benchmarked against trailing-12-month EBITDA.",
+          kicker: "Sec\u021biunea 04 \xB7 Structura capitalului",
+          title: "Pozi\u021bia \u0219i structura datoriei",
+          subtitle: "Evolu\u021bia datoriei totale, defalcat\u0103 \u00eentre datorie bancar\u0103 net\u0103 (finan\u021barea expansiunii) \u0219i datorie fiscal\u0103 (obliga\u021bii fiscale). Datoria bancar\u0103 a crescut odat\u0103 cu extinderea re\u021belei; datoria fiscal\u0103 a fost redus\u0103 constant. Levierul este raportat la EBITDA pe ultimele 12 luni.",
           children: [
             /* @__PURE__ */ jsx(ResponsiveContainer, { width: "100%", height: 340, children: /* @__PURE__ */ jsxs(ComposedChart, { data: DATA, margin: { top: 10, right: 20, left: 0, bottom: 5 }, children: [
               /* @__PURE__ */ jsx(CartesianGrid, { strokeDasharray: "2 4", stroke: C.border, vertical: false }),
@@ -640,7 +640,7 @@ function CashflowDashboard() {
                   tickFormatter: fmtRON,
                   tickLine: false,
                   axisLine: { stroke: C.border },
-                  label: { value: "Debt (RON)", angle: -90, position: "insideLeft", style: { fontFamily: FONT, fontSize: 11, fill: C.muted } }
+                  label: { value: "Datorie (RON)", angle: -90, position: "insideLeft", style: { fontFamily: FONT, fontSize: 11, fill: C.muted } }
                 }
               ),
               /* @__PURE__ */ jsx(
@@ -651,7 +651,7 @@ function CashflowDashboard() {
                   tickFormatter: (v) => "\u20AC" + fmtRON(v),
                   tickLine: false,
                   axisLine: { stroke: C.border },
-                  label: { value: "Total Debt (EUR)", angle: 90, position: "insideRight", style: { fontFamily: FONT, fontSize: 11, fill: C.muted } }
+                  label: { value: "Datorie totală (EUR)", angle: 90, position: "insideRight", style: { fontFamily: FONT, fontSize: 11, fill: C.muted } }
                 }
               ),
               /* @__PURE__ */ jsx(
@@ -681,15 +681,15 @@ function CashflowDashboard() {
                 }
               ),
               /* @__PURE__ */ jsx(Legend, { wrapperStyle: { paddingTop: 10, fontFamily: FONT } }),
-              /* @__PURE__ */ jsx(Bar, { yAxisId: "left", dataKey: "netBankDebt", stackId: "d", name: "Net Bank Debt", fill: C.primary, radius: [0, 0, 0, 0] }),
-              /* @__PURE__ */ jsx(Bar, { yAxisId: "left", dataKey: "fiscalDebt", stackId: "d", name: "Fiscal Debt", fill: C.terracotta, radius: [2, 2, 0, 0] }),
+              /* @__PURE__ */ jsx(Bar, { yAxisId: "left", dataKey: "netBankDebt", stackId: "d", name: "Datorie bancară netă", fill: C.primary, radius: [0, 0, 0, 0] }),
+              /* @__PURE__ */ jsx(Bar, { yAxisId: "left", dataKey: "fiscalDebt", stackId: "d", name: "Datorie fiscală", fill: C.terracotta, radius: [2, 2, 0, 0] }),
               /* @__PURE__ */ jsx(
                 Line,
                 {
                   yAxisId: "right",
                   type: "monotone",
                   dataKey: "totalDebtEUR",
-                  name: "Total Debt (EUR)",
+                  name: "Datorie totală (EUR)",
                   stroke: C.amberGold,
                   strokeWidth: 2.5,
                   dot: { r: 4, fill: C.amberGold, strokeWidth: 0 },
@@ -702,7 +702,7 @@ function CashflowDashboard() {
                 AggregateBox,
                 {
                   color: C.text,
-                  label: "Total Debt Jun 26",
+                  label: "Datorie totală Iun 26",
                   value: fmtRONfull(latest.totalDebt) + " RON",
                   sub: `\u20AC${fmtRONfull(latest.totalDebtEUR)} \xB7 MoM ${fmtRON(latest.totalDebt - prev.totalDebt)}`
                 }
@@ -711,16 +711,16 @@ function CashflowDashboard() {
                 AggregateBox,
                 {
                   color: C.primary,
-                  label: "Net Bank Debt",
+                  label: "Datorie bancară netă",
                   value: fmtRONfull(latest.netBankDebt) + " RON",
-                  sub: `${(latest.netBankDebt / latest.totalDebt * 100).toFixed(1)}% of total \xB7 expansion financing`
+                  sub: `${(latest.netBankDebt / latest.totalDebt * 100).toFixed(1)}% din total \xB7 finan\u021bare expansiune`
                 }
               ),
               /* @__PURE__ */ jsx(
                 AggregateBox,
                 {
                   color: C.terracotta,
-                  label: "Fiscal Debt",
+                  label: "Datorie fiscală",
                   value: fmtRONfull(latest.fiscalDebt) + " RON",
                   sub: `${fmtPct(fiscalDebtMoM, 0)} MoM \xB7 ${fmtPct(fiscalDebtChange, 0)} vs Apr 25`
                 }
@@ -729,18 +729,18 @@ function CashflowDashboard() {
                 AggregateBox,
                 {
                   color: C.amberGold,
-                  label: "Net Debt / TTM EBITDA",
+                  label: "Datorie netă / EBITDA TTM",
                   value: (latest.totalDebt / ttmEbitda).toFixed(2) + "x",
-                  sub: `TTM EBITDA ${fmtRON(ttmEbitda)} RON \xB7 healthy leverage`
+                  sub: `EBITDA TTM ${fmtRON(ttmEbitda)} RON \xB7 levier s\u0103n\u0103tos`
                 }
               ),
               /* @__PURE__ */ jsx(
                 AggregateBox,
                 {
                   color: C.olive,
-                  label: "YoY Total Debt",
+                  label: "Datorie totală YoY",
                   value: fmtPct(debtYoY, 0),
-                  sub: `Jun 25: ${fmtRON(yearAgo.totalDebt)} \u2192 Jun 26: ${fmtRON(latest.totalDebt)}`
+                  sub: `Iun 25: ${fmtRON(yearAgo.totalDebt)} \u2192 Iun 26: ${fmtRON(latest.totalDebt)}`
                 }
               )
             ] })
@@ -750,9 +750,9 @@ function CashflowDashboard() {
       /* @__PURE__ */ jsxs(
         Section,
         {
-          kicker: "Section 05 \xB7 Overdraft Facility",
-          title: "Bank Overdraft Position",
-          subtitle: `Total facility ceiling of ${fmtRONfull(OVERDRAFT_LIMIT)} RON. Burgundy area = drawn balance; the dashed outline above represents the unused reserve still available to the business. The facility was first activated in December 2025 to bridge the seasonal cash trough and peaked at 78% of facility in February 2026. After May 2026 took utilisation down to 31%, June 2026 draws ${fmtRONfull(Math.abs(latest.odMov))} RON back down to fund the month\u2019s payables reduction and distributions, lifting utilisation to ${(latest.odBal / OVERDRAFT_LIMIT * 100).toFixed(0)}% \u2014 still ${fmtRONfull(OVERDRAFT_LIMIT - latest.odBal)} RON of headroom, but the direction reverses for the first time since February.`,
+          kicker: "Sec\u021biunea 05 \xB7 Linia de overdraft",
+          title: "Pozi\u021bia liniei de overdraft",
+          subtitle: `Plafon total al liniei de ${fmtRONfull(OVERDRAFT_LIMIT)} RON. Zona bordo = sold tras; conturul punctat de deasupra reprezint\u0103 rezerva neutilizat\u0103, \u00eenc\u0103 disponibil\u0103. Linia a fost activat\u0103 pentru prima dat\u0103 \u00een decembrie 2025 pentru a acoperi minimul sezonier de numerar \u0219i a atins un v\u00e2rf de 78% \u00een februarie 2026. Dup\u0103 ce mai 2026 a redus utilizarea la 31%, iunie 2026 trage din nou ${fmtRONfull(Math.abs(latest.odMov))} RON pentru a finan\u021ba reducerea furnizorilor \u0219i distribu\u021biile, urc\u00e2nd utilizarea la ${(latest.odBal / OVERDRAFT_LIMIT * 100).toFixed(0)}% \u2014 r\u0103m\u00e2n\u00e2nd ${fmtRONfull(OVERDRAFT_LIMIT - latest.odBal)} RON de rezerv\u0103, dar direc\u021bia se inverseaz\u0103 pentru prima dat\u0103 din februarie.`,
           children: [
             /* @__PURE__ */ jsx(ResponsiveContainer, { width: "100%", height: 300, children: /* @__PURE__ */ jsxs(
               ComposedChart,
@@ -802,7 +802,7 @@ function CashflowDashboard() {
                           /* @__PURE__ */ jsxs("div", { style: { display: "flex", justifyContent: "space-between", gap: 16 }, children: [
                             /* @__PURE__ */ jsxs("span", { style: { display: "flex", alignItems: "center", gap: 6 }, children: [
                               /* @__PURE__ */ jsx("span", { style: { width: 8, height: 8, background: C.primary, display: "inline-block", borderRadius: 1 } }),
-                              "Drawn"
+                              "Tras"
                             ] }),
                             /* @__PURE__ */ jsxs("span", { style: { fontWeight: 600 }, children: [
                               fmtRONfull(drawn),
@@ -812,7 +812,7 @@ function CashflowDashboard() {
                           /* @__PURE__ */ jsxs("div", { style: { display: "flex", justifyContent: "space-between", gap: 16 }, children: [
                             /* @__PURE__ */ jsxs("span", { style: { display: "flex", alignItems: "center", gap: 6 }, children: [
                               /* @__PURE__ */ jsx("span", { style: { width: 8, height: 8, background: C.amberGold, display: "inline-block", borderRadius: 1, opacity: 0.5, border: `1px dashed ${C.amberGold}` } }),
-                              "Reserve available"
+                              "Rezervă disponibilă"
                             ] }),
                             /* @__PURE__ */ jsxs("span", { style: { fontWeight: 600 }, children: [
                               fmtRONfull(reserve),
@@ -820,7 +820,7 @@ function CashflowDashboard() {
                             ] })
                           ] }),
                           /* @__PURE__ */ jsxs("div", { style: { borderTop: `1px solid ${C.border}`, marginTop: 6, paddingTop: 6, display: "flex", justifyContent: "space-between", gap: 16 }, children: [
-                            /* @__PURE__ */ jsx("span", { style: { color: C.muted }, children: "Utilisation" }),
+                            /* @__PURE__ */ jsx("span", { style: { color: C.muted }, children: "Utilizare" }),
                             /* @__PURE__ */ jsxs("span", { style: { fontWeight: 700, color: utilPct > 70 ? C.alert : utilPct > 40 ? C.amberGold : C.olive }, children: [
                               utilPct.toFixed(1),
                               "%"
@@ -835,9 +835,9 @@ function CashflowDashboard() {
                     {
                       wrapperStyle: { paddingTop: 10, fontFamily: FONT },
                       payload: [
-                        { value: "Drawn balance", type: "square", color: C.primary, id: "drawn" },
-                        { value: "Reserve available", type: "square", color: C.amberGold, id: "reserve" },
-                        { value: `Facility ceiling (${fmtRON(OVERDRAFT_LIMIT)})`, type: "line", color: C.text, id: "limit" }
+                        { value: "Sold tras", type: "square", color: C.primary, id: "drawn" },
+                        { value: "Rezervă disponibilă", type: "square", color: C.amberGold, id: "reserve" },
+                        { value: `Plafon linie (${fmtRON(OVERDRAFT_LIMIT)})`, type: "line", color: C.text, id: "limit" }
                       ]
                     }
                   ),
@@ -847,7 +847,7 @@ function CashflowDashboard() {
                       type: "monotone",
                       dataKey: "odBal",
                       stackId: "ovd",
-                      name: "Drawn",
+                      name: "Tras",
                       stroke: C.primary,
                       strokeWidth: 2,
                       fill: "url(#drawnGrad)",
@@ -860,7 +860,7 @@ function CashflowDashboard() {
                       type: "monotone",
                       dataKey: "odReserve",
                       stackId: "ovd",
-                      name: "Reserve",
+                      name: "Rezervă",
                       stroke: C.amberGold,
                       strokeWidth: 1.5,
                       strokeDasharray: "5 4",
@@ -877,7 +877,7 @@ function CashflowDashboard() {
                       strokeWidth: 1.5,
                       strokeDasharray: "2 2",
                       label: {
-                        value: `Facility ceiling: ${fmtRONfull(OVERDRAFT_LIMIT)} RON`,
+                        value: `Plafon linie: ${fmtRONfull(OVERDRAFT_LIMIT)} RON`,
                         position: "insideTopRight",
                         fill: C.text,
                         fontSize: 11,
@@ -894,36 +894,36 @@ function CashflowDashboard() {
                 AggregateBox,
                 {
                   color: C.primary,
-                  label: "Drawn (Jun 26)",
+                  label: "Tras (Iun 26)",
                   value: fmtRONfull(latest.odBal) + " RON",
-                  sub: `${(latest.odBal / OVERDRAFT_LIMIT * 100).toFixed(1)}% of facility utilised`
+                  sub: `${(latest.odBal / OVERDRAFT_LIMIT * 100).toFixed(1)}% din linie utilizat`
                 }
               ),
               /* @__PURE__ */ jsx(
                 AggregateBox,
                 {
                   color: C.amberGold,
-                  label: "Reserve available",
+                  label: "Rezervă disponibilă",
                   value: fmtRONfull(OVERDRAFT_LIMIT - latest.odBal) + " RON",
-                  sub: `${((OVERDRAFT_LIMIT - latest.odBal) / OVERDRAFT_LIMIT * 100).toFixed(1)}% of ceiling unused`
+                  sub: `${((OVERDRAFT_LIMIT - latest.odBal) / OVERDRAFT_LIMIT * 100).toFixed(1)}% din plafon neutilizat`
                 }
               ),
               /* @__PURE__ */ jsx(
                 AggregateBox,
                 {
                   color: C.terracotta,
-                  label: "Jun 26 drawdown",
+                  label: "Tragere Iun 26",
                   value: "+" + fmtRONfull(Math.abs(latest.odMov)) + " RON",
-                  sub: "Redrawn to fund payables reduction"
+                  sub: "Retras pentru reducerea furnizorilor"
                 }
               ),
               /* @__PURE__ */ jsx(
                 AggregateBox,
                 {
                   color: C.terracotta,
-                  label: "Peak utilisation (Feb 26)",
+                  label: "Utilizare maximă (Feb 26)",
                   value: (782391 / OVERDRAFT_LIMIT * 100).toFixed(1) + "%",
-                  sub: `${fmtRONfull(782391)} RON drawn at peak`
+                  sub: `${fmtRONfull(782391)} RON trași la vârf`
                 }
               )
             ] })
@@ -933,9 +933,9 @@ function CashflowDashboard() {
       /* @__PURE__ */ jsxs(
         Section,
         {
-          kicker: "Section 06 \xB7 Intercompany",
-          title: "Loans Granted to Other Entities",
-          subtitle: "Cumulative cash deployed from Dr. Ardeleanu OPCO into related/holding entities. Steady accumulation through Q1\u2013Q3 2025, then a sharp Q4 2025 deployment phase. June 2026 adds nothing \u2014 the first month with no new deployment since June 2025 \u2014 leaving the balance flat at 4.99M RON.",
+          kicker: "Sec\u021biunea 06 \xB7 Intra-grup",
+          title: "\u00cemprumuturi acordate altor entit\u0103\u021bi",
+          subtitle: "Numerar cumulat alocat din Dr. Ardeleanu OPCO c\u0103tre entit\u0103\u021bi afiliate/holding. Acumulare constant\u0103 \u00een T1\u2013T3 2025, urmat\u0103 de o faz\u0103 accelerat\u0103 de alocare \u00een T4 2025. Iunie 2026 nu adaug\u0103 nimic \u2014 prima lun\u0103 f\u0103r\u0103 alocare nou\u0103 din iunie 2025 \u2014 soldul r\u0103m\u00e2n\u00e2nd plat la 4,99M RON.",
           children: [
             /* @__PURE__ */ jsx(ResponsiveContainer, { width: "100%", height: 300, children: /* @__PURE__ */ jsxs(
               ComposedChart,
@@ -959,7 +959,7 @@ function CashflowDashboard() {
                       tickFormatter: fmtRON,
                       tickLine: false,
                       axisLine: { stroke: C.border },
-                      label: { value: "Cumulative outstanding (RON)", angle: -90, position: "insideLeft", style: { fontFamily: FONT, fontSize: 11, fill: C.muted } }
+                      label: { value: "Sold cumulat (RON)", angle: -90, position: "insideLeft", style: { fontFamily: FONT, fontSize: 11, fill: C.muted } }
                     }
                   ),
                   /* @__PURE__ */ jsx(
@@ -970,7 +970,7 @@ function CashflowDashboard() {
                       tickFormatter: fmtRON,
                       tickLine: false,
                       axisLine: { stroke: C.border },
-                      label: { value: "New monthly loan (RON)", angle: 90, position: "insideRight", style: { fontFamily: FONT, fontSize: 11, fill: C.muted } }
+                      label: { value: "Împrumut nou lunar (RON)", angle: 90, position: "insideRight", style: { fontFamily: FONT, fontSize: 11, fill: C.muted } }
                     }
                   ),
                   /* @__PURE__ */ jsx(
@@ -991,21 +991,21 @@ function CashflowDashboard() {
                         }, children: [
                           /* @__PURE__ */ jsx("div", { style: { fontWeight: 700, color: C.primary, marginBottom: 6 }, children: label }),
                           /* @__PURE__ */ jsxs("div", { style: { display: "flex", justifyContent: "space-between", gap: 16 }, children: [
-                            /* @__PURE__ */ jsx("span", { style: { color: C.muted }, children: "Cumulative" }),
+                            /* @__PURE__ */ jsx("span", { style: { color: C.muted }, children: "Cumulat" }),
                             /* @__PURE__ */ jsxs("span", { style: { fontWeight: 600 }, children: [
                               fmtRONfull(row.ilBal),
                               " RON"
                             ] })
                           ] }),
                           /* @__PURE__ */ jsxs("div", { style: { display: "flex", justifyContent: "space-between", gap: 16 }, children: [
-                            /* @__PURE__ */ jsx("span", { style: { color: C.muted }, children: "EUR equivalent" }),
+                            /* @__PURE__ */ jsx("span", { style: { color: C.muted }, children: "Echivalent EUR" }),
                             /* @__PURE__ */ jsxs("span", { style: { fontWeight: 600 }, children: [
                               "\u20AC",
                               fmtRONfull(row.ilBalEUR)
                             ] })
                           ] }),
                           /* @__PURE__ */ jsxs("div", { style: { borderTop: `1px solid ${C.border}`, marginTop: 6, paddingTop: 6, display: "flex", justifyContent: "space-between", gap: 16 }, children: [
-                            /* @__PURE__ */ jsx("span", { style: { color: C.muted }, children: "New this month" }),
+                            /* @__PURE__ */ jsx("span", { style: { color: C.muted }, children: "Nou luna aceasta" }),
                             /* @__PURE__ */ jsxs("span", { style: { fontWeight: 700, color: row.ilNew > 0 ? C.terracotta : C.olive }, children: [
                               row.ilNew > 0 ? "+" : "",
                               fmtRONfull(row.ilNew),
@@ -1021,19 +1021,19 @@ function CashflowDashboard() {
                     {
                       wrapperStyle: { paddingTop: 10, fontFamily: FONT },
                       payload: [
-                        { value: "Cumulative outstanding", type: "square", color: C.primary, id: "cum" },
-                        { value: "New monthly outflow", type: "square", color: C.terracotta, id: "new" }
+                        { value: "Sold cumulat", type: "square", color: C.primary, id: "cum" },
+                        { value: "Ieșire nouă lunară", type: "square", color: C.terracotta, id: "new" }
                       ]
                     }
                   ),
-                  /* @__PURE__ */ jsx(Bar, { yAxisId: "right", dataKey: "ilNew", name: "New monthly outflow", fill: C.terracotta, radius: [2, 2, 0, 0] }),
+                  /* @__PURE__ */ jsx(Bar, { yAxisId: "right", dataKey: "ilNew", name: "Ieșire nouă lunară", fill: C.terracotta, radius: [2, 2, 0, 0] }),
                   /* @__PURE__ */ jsx(
                     Area,
                     {
                       yAxisId: "left",
                       type: "monotone",
                       dataKey: "ilBal",
-                      name: "Cumulative outstanding",
+                      name: "Sold cumulat",
                       stroke: C.primary,
                       strokeWidth: 2.5,
                       fill: "url(#loansGrad)"
@@ -1047,27 +1047,27 @@ function CashflowDashboard() {
                 AggregateBox,
                 {
                   color: C.primary,
-                  label: "Outstanding Jun 26",
+                  label: "Sold Iun 26",
                   value: fmtRONfull(latest.ilBal) + " RON",
-                  sub: `\u20AC${fmtRONfull(latest.ilBalEUR)} cumulative deployed`
+                  sub: `\u20AC${fmtRONfull(latest.ilBalEUR)} alocat cumulat`
                 }
               ),
               /* @__PURE__ */ jsx(
                 AggregateBox,
                 {
                   color: C.olive,
-                  label: "Jun 26 new loan",
+                  label: "Împrumut nou Iun 26",
                   value: fmtRONfull(latest.ilBal - prev.ilBal) + " RON",
-                  sub: "No new deployment \xB7 229k in May"
+                  sub: "F\u0103r\u0103 alocare nou\u0103 \xB7 229k \u00een mai"
                 }
               ),
               /* @__PURE__ */ jsx(
                 AggregateBox,
                 {
                   color: C.amberGold,
-                  label: "Largest month (Oct 25)",
+                  label: "Cea mai mare lună (Oct 25)",
                   value: fmtRONfull(172e4) + " RON",
-                  sub: "Q4 2025 deployment phase"
+                  sub: "Faza de alocare T4 2025"
                 }
               ),
               /* @__PURE__ */ jsx(
@@ -1076,7 +1076,7 @@ function CashflowDashboard() {
                   color: C.olive,
                   label: "15-month total deployed",
                   value: "\u20AC" + fmtRONfull(latest.ilBalEUR),
-                  sub: `From \u20AC${fmtRONfull(DATA[0].ilBalEUR)} (Apr 25) to \u20AC${fmtRONfull(latest.ilBalEUR)} (Jun 26)`
+                  sub: `De la \u20AC${fmtRONfull(DATA[0].ilBalEUR)} (Apr 25) la \u20AC${fmtRONfull(latest.ilBalEUR)} (Iun 26)`
                 }
               )
             ] })
@@ -1086,18 +1086,18 @@ function CashflowDashboard() {
       /* @__PURE__ */ jsxs(
         Section,
         {
-          kicker: "Section 07 \xB7 Shareholders",
-          title: "Shareholder Distributions \u2014 Net Monthly Outflows",
+          kicker: "Sec\u021biunea 07 \xB7 Ac\u021bionari",
+          title: "Distribu\u021bii c\u0103tre ac\u021bionari \u2014 ie\u0219iri nete lunare",
           subtitle: /* @__PURE__ */ jsxs(Fragment, { children: [
             /* @__PURE__ */ jsx("strong", { style: { color: C.primary }, children: "Net" }),
-            " cash distributions to shareholders \u2014 figures already exclude any amounts reinvested back into the company via DP. Only money that effectively left the business is shown. Aug 2025 marks the peak (\u20AC136,572) reflecting an extraordinary distribution. June 2026 comes in at ",
+            " \u2014 distribu\u021bii de numerar c\u0103tre ac\u021bionari; cifrele exclud deja sumele reinvestite \u00een companie prin DP. Este ar\u0103tat doar banul care a ie\u0219it efectiv din business. August 2025 marcheaz\u0103 v\u00e2rful (\u20AC136.572), o distribu\u021bie extraordinar\u0103. Iunie 2026 se \u00eencheie la ",
             /* @__PURE__ */ jsxs("strong", { children: [
               "\u20AC",
               fmtRONfull(latest.shSpendEUR)
             ] }),
-            ", below the 15-month average and down from May\u2019s \u20AC",
+            ", sub media pe 15 luni \u0219i \u00een sc\u0103dere fa\u021b\u0103 de mai (\u20AC",
             fmtRONfull(prev.shSpendEUR),
-            " \u2014 a normalised month with no extraordinary element."
+            ") \u2014 o lun\u0103 normalizat\u0103, f\u0103r\u0103 element extraordinar."
           ] }),
           children: [
             /* @__PURE__ */ jsx(ResponsiveContainer, { width: "100%", height: 280, children: /* @__PURE__ */ jsxs(ComposedChart, { data: DATA, margin: { top: 16, right: 20, left: 0, bottom: 5 }, children: [
@@ -1111,7 +1111,7 @@ function CashflowDashboard() {
                   tickLine: false,
                   axisLine: { stroke: C.border },
                   domain: [0, 8e5],
-                  label: { value: "Monthly outflow (RON)", angle: -90, position: "insideLeft", style: { fontFamily: FONT, fontSize: 11, fill: C.muted } }
+                  label: { value: "Ieșire lunară (RON)", angle: -90, position: "insideLeft", style: { fontFamily: FONT, fontSize: 11, fill: C.muted } }
                 }
               ),
               /* @__PURE__ */ jsx(
@@ -1123,7 +1123,7 @@ function CashflowDashboard() {
                   tickLine: false,
                   axisLine: { stroke: C.border },
                   domain: [0, 8e5],
-                  label: { value: "EUR equivalent", angle: 90, position: "insideRight", style: { fontFamily: FONT, fontSize: 11, fill: C.muted } }
+                  label: { value: "Echivalent EUR", angle: 90, position: "insideRight", style: { fontFamily: FONT, fontSize: 11, fill: C.muted } }
                 }
               ),
               /* @__PURE__ */ jsx(
@@ -1144,14 +1144,14 @@ function CashflowDashboard() {
                     }, children: [
                       /* @__PURE__ */ jsx("div", { style: { fontWeight: 700, color: C.primary, marginBottom: 6 }, children: label }),
                       /* @__PURE__ */ jsxs("div", { style: { display: "flex", justifyContent: "space-between", gap: 16 }, children: [
-                        /* @__PURE__ */ jsx("span", { style: { color: C.muted }, children: "Distribution" }),
+                        /* @__PURE__ */ jsx("span", { style: { color: C.muted }, children: "Distribuție" }),
                         /* @__PURE__ */ jsxs("span", { style: { fontWeight: 600 }, children: [
                           fmtRONfull(row.shSpend),
                           " RON"
                         ] })
                       ] }),
                       /* @__PURE__ */ jsxs("div", { style: { display: "flex", justifyContent: "space-between", gap: 16 }, children: [
-                        /* @__PURE__ */ jsx("span", { style: { color: C.muted }, children: "EUR equivalent" }),
+                        /* @__PURE__ */ jsx("span", { style: { color: C.muted }, children: "Echivalent EUR" }),
                         /* @__PURE__ */ jsxs("span", { style: { fontWeight: 600 }, children: [
                           "\u20AC",
                           fmtRONfull(row.shSpendEUR)
@@ -1166,9 +1166,9 @@ function CashflowDashboard() {
                 {
                   wrapperStyle: { paddingTop: 10, fontFamily: FONT },
                   payload: [
-                    { value: "Monthly distribution", type: "square", color: C.primary, id: "sh" },
+                    { value: "Distribuție lunară", type: "square", color: C.primary, id: "sh" },
                     {
-                      value: `15-month average \xB7 ${fmtRON(DATA.reduce((a, r) => a + r.shSpend, 0) / DATA.length)} RON \xB7 \u20AC${fmtRON(DATA.reduce((a, r) => a + r.shSpendEUR, 0) / DATA.length)}`,
+                      value: `Media pe 15 luni \xB7 ${fmtRON(DATA.reduce((a, r) => a + r.shSpend, 0) / DATA.length)} RON \xB7 \u20AC${fmtRON(DATA.reduce((a, r) => a + r.shSpendEUR, 0) / DATA.length)}`,
                       type: "line",
                       color: C.amberGold,
                       id: "avg"
@@ -1185,7 +1185,7 @@ function CashflowDashboard() {
                   strokeWidth: 1.5,
                   strokeDasharray: "5 4",
                   label: {
-                    value: "AVG",
+                    value: "MEDIE",
                     position: "insideTopLeft",
                     offset: 8,
                     fill: C.amberGold,
@@ -1196,23 +1196,23 @@ function CashflowDashboard() {
                   }
                 }
               ),
-              /* @__PURE__ */ jsx(Bar, { yAxisId: "left", dataKey: "shSpend", name: "Shareholder distribution", radius: [2, 2, 0, 0], children: DATA.map((d, i) => /* @__PURE__ */ jsx(Cell, { fill: d.shSpend > 5e5 ? C.terracotta : C.primary }, i)) })
+              /* @__PURE__ */ jsx(Bar, { yAxisId: "left", dataKey: "shSpend", name: "Distribuție acționari", radius: [2, 2, 0, 0], children: DATA.map((d, i) => /* @__PURE__ */ jsx(Cell, { fill: d.shSpend > 5e5 ? C.terracotta : C.primary }, i)) })
             ] }) }),
             /* @__PURE__ */ jsxs("div", { style: { display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 12, marginTop: 16, paddingTop: 14, borderTop: `1px solid ${C.border}` }, children: [
               /* @__PURE__ */ jsx(
                 AggregateBox,
                 {
                   color: C.primary,
-                  label: "Jun 26 spend",
+                  label: "Distribuit Iun 26",
                   value: fmtRONfull(latest.shSpend) + " RON",
-                  sub: `\u20AC${fmtRONfull(latest.shSpendEUR)} \xB7 below 15-mo average`
+                  sub: `\u20AC${fmtRONfull(latest.shSpendEUR)} \xB7 sub media pe 15 luni`
                 }
               ),
               /* @__PURE__ */ jsx(
                 AggregateBox,
                 {
                   color: C.terracotta,
-                  label: "Peak (Aug 25)",
+                  label: "Vârf (Aug 25)",
                   value: fmtRONfull(682862) + " RON",
                   sub: "\u20AC136,572 \u2014 extraordinary distribution"
                 }
@@ -1221,9 +1221,9 @@ function CashflowDashboard() {
                 AggregateBox,
                 {
                   color: C.amberGold,
-                  label: "Monthly avg (12-mo)",
+                  label: "Medie lunară (12 luni)",
                   value: fmtRONfull(Math.round(DATA.slice(-12).reduce((a, r) => a + r.shSpend, 0) / 12)) + " RON",
-                  sub: `\u20AC${fmtRONfull(Math.round(DATA.slice(-12).reduce((a, r) => a + r.shSpendEUR, 0) / 12))} per month \xB7 trailing 12-mo`
+                  sub: `\u20AC${fmtRONfull(Math.round(DATA.slice(-12).reduce((a, r) => a + r.shSpendEUR, 0) / 12))} pe lun\u0103 \xB7 ultimele 12 luni`
                 }
               ),
               /* @__PURE__ */ jsx(
@@ -1232,7 +1232,7 @@ function CashflowDashboard() {
                   color: C.olive,
                   label: "12-month total",
                   value: fmtRONfull(DATA.slice(-12).reduce((a, r) => a + r.shSpend, 0)) + " RON",
-                  sub: `\u20AC${fmtRONfull(DATA.slice(-12).reduce((a, r) => a + r.shSpendEUR, 0))} \xB7 Jul 25 \u2013 Jun 26`
+                  sub: `\u20AC${fmtRONfull(DATA.slice(-12).reduce((a, r) => a + r.shSpendEUR, 0))} \xB7 Iul 25 \u2013 Iun 26`
                 }
               )
             ] })
@@ -1251,7 +1251,7 @@ function CashflowDashboard() {
       }, children: [
         /* @__PURE__ */ jsxs("div", { style: { fontSize: 11, color: C.muted }, children: [
           /* @__PURE__ */ jsx("strong", { style: { color: C.primary }, children: "Dr. Ardeleanu Dental Clinics" }),
-          " \xB7 CFO Reporting \xB7 Treasury & Cashflow \xB7 Period: Apr 2025 \u2013 Jun 2026 \xB7 All figures in RON \xB7 OPCO + PROPCO consolidated"
+          " \xB7 Raportare CFO \xB7 Trezorerie & Cashflow \xB7 Perioada: Apr 2025 \u2013 Iun 2026 \xB7 Toate cifrele \u00een RON \xB7 OPCO + PROPCO consolidat"
         ] }),
         /* @__PURE__ */ jsx("div", { style: { fontSize: 10, fontWeight: 300, color: C.muted, letterSpacing: 1, textTransform: "uppercase" }, children: "Din 2017 \xB7 clinicileardeleanu.ro" })
       ] })
