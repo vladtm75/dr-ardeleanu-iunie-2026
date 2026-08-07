@@ -91,6 +91,7 @@ body{margin:0;font-family:'Poppins',system-ui,sans-serif;}
     if(document.querySelector('.'+CLASS))return;
     var h=findHeader();
     if(h && h.parentNode){
+      h.style.marginBottom='0';
       var headerH = h.getBoundingClientRect().height;
       h.parentNode.insertBefore(buildBar(headerH), h.nextSibling);
       h.parentNode.insertBefore(buildHairline(headerH), h.nextSibling);
