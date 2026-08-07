@@ -530,8 +530,8 @@ function CashflowDashboard() {
               )
             ] }) }),
             /* @__PURE__ */ jsxs("div", { style: { display: "flex", gap: 24, marginTop: 16, paddingTop: 14, borderTop: `1px solid ${C.border}`, flexWrap: "wrap" }, children: [
-              /* @__PURE__ */ jsx(MiniStat, { label: "15-mo opening", value: fmtRONfull(DATA[0].cashOpen) + " RON" }),
-              /* @__PURE__ */ jsx(MiniStat, { label: "15-mo closing", value: fmtRONfull(latest.cashEnd) + " RON" }),
+              /* @__PURE__ */ jsx(MiniStat, { label: "Sold ini\u021bial 15 luni", value: fmtRONfull(DATA[0].cashOpen) + " RON" }),
+              /* @__PURE__ */ jsx(MiniStat, { label: "Sold final 15 luni", value: fmtRONfull(latest.cashEnd) + " RON" }),
               /* @__PURE__ */ jsx(MiniStat, { label: "Variație netă", value: fmtRONfull(latest.cashEnd - DATA[0].cashOpen) + " RON", accent: true }),
               /* @__PURE__ */ jsx(MiniStat, { label: "Vârf (Iul 25)", value: fmtRONfull(2153145) + " RON" }),
               /* @__PURE__ */ jsx(MiniStat, { label: "Minim (Dec 25)", value: fmtRONfull(321905) + " RON" })
@@ -1074,7 +1074,7 @@ function CashflowDashboard() {
                 AggregateBox,
                 {
                   color: C.olive,
-                  label: "15-month total deployed",
+                  label: "Total alocat 15 luni",
                   value: "\u20AC" + fmtRONfull(latest.ilBalEUR),
                   sub: `De la \u20AC${fmtRONfull(DATA[0].ilBalEUR)} (Apr 25) la \u20AC${fmtRONfull(latest.ilBalEUR)} (Iun 26)`
                 }
