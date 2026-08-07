@@ -302,7 +302,6 @@ function CashflowDashboard() {
         top: 0,
         zIndex: 100,
         display: "flex",
-        justifyContent: "space-between",
         alignItems: "center",
         flexWrap: "wrap",
         gap: 16,
@@ -327,7 +326,8 @@ function CashflowDashboard() {
           fontSize: 10,
           fontWeight: 700,
           letterSpacing: 1.8,
-          textTransform: "uppercase"
+          textTransform: "uppercase",
+          marginLeft: "auto"
         }, children: "Realizat Iun 2026" })
       ] }),      /* @__PURE__ */ jsxs("div", { style: { maxWidth: 1280, margin: "0 auto", padding: "0 28px" }, children: [
       /* @__PURE__ */ jsxs("div", { style: { display: "flex", gap: 14, marginBottom: 18, flexWrap: "wrap" }, children: [

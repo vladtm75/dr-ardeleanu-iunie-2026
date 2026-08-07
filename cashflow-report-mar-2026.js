@@ -283,7 +283,7 @@ function CashflowDashboard() {
     minHeight: "100vh",
     background: C.cream,
     fontFamily: FONT,
-    padding: "24px 28px 60px",
+    padding: "0 0 60px",
     color: C.text
   }, children: [
     /* @__PURE__ */ jsx("style", { children: `
@@ -291,41 +291,44 @@ function CashflowDashboard() {
         .recharts-cartesian-axis-tick-value { font-family: ${FONT}; font-size: 11px; fill: ${C.muted}; }
         .recharts-legend-item-text { font-family: ${FONT}; font-size: 12px; color: ${C.text} !important; }
       ` }),
-    /* @__PURE__ */ jsxs("div", { style: { maxWidth: 1280, margin: "0 auto" }, children: [
-      /* @__PURE__ */ jsxs("header", { style: {
-        background: C.primary,
-        borderRadius: 4,
-        padding: "16px 26px",
-        marginBottom: 18,
-        display: "flex",
-        justifyContent: "space-between",
-        alignItems: "center",
-        flexWrap: "wrap",
-        gap: 16,
-        boxShadow: "0 1px 3px rgba(0,0,0,0.08)"
-      }, children: [
-        /* @__PURE__ */ jsx("h1", { style: {
-          fontFamily: "'Playfair Display', serif",
-          fontWeight: 700,
-          fontSize: 22,
-          color: C.white,
-          margin: 0,
-          lineHeight: 1.2,
-          letterSpacing: 0.2
-        }, children: "March 2026 Cashflow Position \u2013 Dr. Ardeleanu" }),
-        /* @__PURE__ */ jsx("div", { style: {
-          display: "inline-block",
-          background: C.yellow,
-          color: C.text,
-          padding: "6px 14px",
-          borderRadius: 999,
-          fontFamily: FONT,
-          fontSize: 10,
-          fontWeight: 700,
-          letterSpacing: 1.8,
-          textTransform: "uppercase"
-        }, children: "Actual Mar 2026" })
-      ] }),
+    /* @__PURE__ */ jsxs("header", { style: {
+      background: C.primary,
+      borderRadius: 0,
+      padding: "14px 32px",
+      marginBottom: 18,
+      position: "sticky",
+      top: 0,
+      zIndex: 100,
+      display: "flex",
+      alignItems: "center",
+      flexWrap: "wrap",
+      gap: 16,
+      boxShadow: "0 2px 6px rgba(0,0,0,0.06)"
+    }, children: [
+      /* @__PURE__ */ jsx("h1", { style: {
+        fontFamily: "'Playfair Display', serif",
+        fontWeight: 700,
+        fontSize: 21,
+        color: C.white,
+        margin: 0,
+        lineHeight: 1.2,
+        letterSpacing: -0.2
+      }, children: "March 2026 Cashflow Position \u2013 Dr. Ardeleanu" }),
+      /* @__PURE__ */ jsx("div", { style: {
+        display: "inline-block",
+        background: C.yellow,
+        color: C.text,
+        padding: "6px 14px",
+        borderRadius: 999,
+        fontFamily: FONT,
+        fontSize: 10,
+        fontWeight: 700,
+        letterSpacing: 1.8,
+        textTransform: "uppercase",
+        marginLeft: "auto"
+      }, children: "Actual Mar 2026" })
+    ] }),
+    /* @__PURE__ */ jsxs("div", { style: { maxWidth: 1280, margin: "0 auto", padding: "0 28px" }, children: [
       /* @__PURE__ */ jsxs("div", { style: { display: "flex", gap: 14, marginBottom: 18, flexWrap: "wrap" }, children: [
         /* @__PURE__ */ jsx(
           KPI,
