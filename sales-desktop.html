@@ -1951,7 +1951,32 @@ function App() {
             <span style={{background:'#FBE483',color:'#7B1C16',fontSize:10,fontWeight:700,padding:'4px 10px',borderRadius:20,letterSpacing:'0.06em',textTransform:'uppercase'}}>
               {'Actual '+MONTHS[ACT_MO-1]+' 2026'}
             </span>
+            <div style={{display:'flex',alignItems:'center',background:'rgba(0,0,0,0.25)',borderRadius:20,padding:3,gap:2}}>
+              {['Month','YTD'].map(v=>{ const on=view===v; return (
+                <button key={v} onClick={()=>setView(v)} style={{
+                  background:on?'#ffffff':'transparent',
+                  color:on?'#7B1C16':'rgba(255,255,255,0.7)',
+                  border:'none',cursor:'pointer',borderRadius:16,padding:'4px 13px',
+                  fontSize:11,fontWeight:700,fontFamily:"'DM Sans',system-ui",
+                  letterSpacing:'0.04em',textTransform:'uppercase',
+                }}>{v}</button>
+              );})}
+            </div>
           </div>
+        </div>
+
+        {/* Rapoarte lunare — mutat imediat sub header (model: restul rapoartelor) */}
+        <div style={{background:P.white,borderBottom:`1px solid #F0F0F0`,padding:'9px 28px',display:'flex',gap:7,alignItems:'center',flexWrap:'wrap'}}>
+          <span style={{fontSize:9,fontWeight:600,color:P.amber,marginRight:6,textTransform:'uppercase',letterSpacing:1.6}}>Perioadă</span>
+          {MONTHS.slice(0, LAST_ACT).map((m,i)=>{ const mo=i+1; const on=ACT_MO===mo; return (
+            <button key={m} className={'da-pill'+(on?' on':'')} onClick={()=>setSelMo(mo)} style={{
+              padding:'5px 14px',borderRadius:20,border:'1px solid '+(on?P.primary:'#E6E0DA'),
+              background:on?P.primary:P.white,color:on?P.white:'#5A5A5A',
+              boxShadow:on?'0 2px 6px rgba(123,28,22,0.28)':'none',
+              fontWeight:on?700:500,fontSize:11,cursor:'pointer',fontFamily:"'Poppins',sans-serif",
+            }}>{m}</button>
+          );})}
+          <span style={{fontSize:11,fontWeight:500,color:'#8A8A8A',marginLeft:8}}>{pLabel(period)}</span>
         </div>
 
         {/* Gold hairline */}
@@ -1969,29 +1994,6 @@ function App() {
               whiteSpace:'nowrap',fontFamily:"'Poppins',sans-serif",
             }}>{t.label}</button>
           ))}
-        </div>
-
-        {/* Period toggle */}
-        <div style={{background:P.white,borderBottom:`1px solid #F0F0F0`,padding:'9px 28px',display:'flex',gap:7,alignItems:'center'}}>
-          <span style={{fontSize:9,fontWeight:600,color:P.amber,marginRight:6,textTransform:'uppercase',letterSpacing:1.6}}>Perioadă</span>
-          {MONTHS.slice(0, LAST_ACT).map((m,i)=>{ const mo=i+1; const on=ACT_MO===mo; return (
-            <button key={m} className={'da-pill'+(on?' on':'')} onClick={()=>setSelMo(mo)} style={{
-              padding:'5px 14px',borderRadius:20,border:'1px solid '+(on?P.primary:'#E6E0DA'),
-              background:on?P.primary:P.white,color:on?P.white:'#5A5A5A',
-              boxShadow:on?'0 2px 6px rgba(123,28,22,0.28)':'none',
-              fontWeight:on?700:500,fontSize:11,cursor:'pointer',fontFamily:"'Poppins',sans-serif",
-            }}>{m}</button>
-          );})}
-          <span style={{width:1,height:18,background:'#E6E0DA',margin:'0 5px'}}></span>
-          {[['Month','Lună'],['YTD','YTD']].map(([v,l])=>{ const on=view===v; return (
-            <button key={v} className={'da-pill'+(on?' on':'')} onClick={()=>setView(v)} style={{
-              padding:'5px 15px',borderRadius:20,border:'1px solid '+(on?P.primary:'#E6E0DA'),
-              background:on?P.primary:P.white,color:on?P.white:'#5A5A5A',
-              boxShadow:on?'0 2px 6px rgba(123,28,22,0.28)':'none',
-              fontWeight:700,fontSize:11,cursor:'pointer',fontFamily:"'Poppins',sans-serif",
-            }}>{l}</button>
-          );})}
-          <span style={{fontSize:11,fontWeight:500,color:'#8A8A8A',marginLeft:8}}>{pLabel(period)}</span>
         </div>
 
       </div>
