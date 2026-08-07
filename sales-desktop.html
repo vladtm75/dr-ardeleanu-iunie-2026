@@ -14,27 +14,8 @@
 <script src="https://unpkg.com/@babel/standalone@7.26.4/babel.min.js"></script>
 <style>*{box-sizing:border-box}body{margin:0;background:#F8F8F8;font-family:'Poppins',sans-serif}
 
-<style id="navbarCss">
-#drNav{position:fixed;top:0;left:0;right:0;z-index:9997;display:flex;align-items:center;gap:8px;
-  padding:8px 12px;background:rgba(245,237,227,0.95);border-bottom:1px solid #e2d5c6;
-  -webkit-backdrop-filter:saturate(140%) blur(8px);backdrop-filter:saturate(140%) blur(8px);
-  font-family:'Poppins',system-ui,-apple-system,sans-serif;}
-#drNav a{display:inline-flex;align-items:center;gap:6px;text-decoration:none;
-  font-size:12px;font-weight:600;letter-spacing:0.01em;padding:8px 13px;border-radius:999px;
-  -webkit-tap-highlight-color:transparent;white-space:nowrap;}
-#drNav a.home{background:#7B1C16;color:#fff;}
-#drNav a.home:hover{background:#651511;}
-#drNav a.alt{background:transparent;color:#7B1C16;border:1px solid rgba(123,28,22,0.35);}
-#drNav a.alt:hover{background:rgba(123,28,22,0.07);}
-body{padding-top:52px !important;}
-@media print{#drNav{display:none;}body{padding-top:0 !important;}}
-</style>
 </head>
 <body>
-<div id="drNav">
-  <a class="home" href="index.html">← Pagina principală</a>
-  <a class="alt" href="sales-mobile.html">📱 Versiune mobil</a>
-</div>
 <div id="root"></div>
 <script type="text/babel" data-presets="react">
 const { useState } = React;
@@ -2113,6 +2094,54 @@ function App() {
 }
 
 ReactDOM.createRoot(document.getElementById('root')).render(<App/>);
+</script>
+
+<!-- ── NAVIGARE: butoane integrate in headerul raportului ── -->
+<style id="drNavCss">
+.drNav{display:flex;align-items:center;gap:8px;flex:0 0 auto;}
+.drNav a{display:inline-flex;align-items:center;gap:6px;text-decoration:none;
+  font-family:'Poppins',system-ui,-apple-system,sans-serif;font-size:11.5px;font-weight:600;
+  letter-spacing:.02em;padding:7px 13px;border-radius:999px;white-space:nowrap;
+  transition:background .15s ease;-webkit-tap-highlight-color:transparent;}
+.drNav a.home{background:rgba(255,255,255,.14);color:#F5EDE3;border:1px solid rgba(242,218,183,.45);}
+.drNav a.home:hover{background:rgba(255,255,255,.26);}
+.drNav a.alt{background:transparent;color:#F2DAB7;border:1px solid rgba(242,218,183,.35);}
+.drNav a.alt:hover{background:rgba(242,218,183,.16);}
+#drNavFb{position:fixed;top:10px;left:12px;z-index:9997;padding:6px 8px;border-radius:999px;
+  background:#7B1C16;box-shadow:0 4px 14px rgba(60,20,14,.28);}
+@media print{.drNav{display:none;}}
+</style>
+<script>
+(function(){
+  var ALT="sales-mobile.html", ALTLBL="📱 Versiune mobil";
+  var BURG=["123, 28, 22","142, 32, 25","92, 21, 16","101, 21, 17","94, 21, 15"];
+  function isB(e){var cs=getComputedStyle(e),s=cs.backgroundColor+" "+cs.backgroundImage;
+    for(var i=0;i<BURG.length;i++){if(s.indexOf(BURG[i])>-1)return true;}return false;}
+  function findHeader(){
+    var vw=window.innerWidth,els=document.querySelectorAll('header,div,section');
+    for(var i=0;i<els.length;i++){var e=els[i];
+      if(e.className&&(""+e.className).indexOf('drNav')>-1)continue;
+      var r=e.getBoundingClientRect();
+      if(r.top>200||r.width<vw*0.4||r.height<36||r.height>200)continue;
+      if(isB(e))return e;}
+    return null;}
+  function build(){var d=document.createElement('div');d.className='drNav';
+    d.innerHTML='<a class="home" href="index.html">\u2190 Pagina principală</a>'+
+                '<a class="alt" href="'+ALT+'">'+ALTLBL+'</a>';return d;}
+  var tries=0;
+  function mount(){
+    if(document.querySelector('.drNav'))return;
+    var h=findHeader();
+    if(h){var d=build(),cs=getComputedStyle(h);
+      if(cs.display==='flex'&&cs.flexDirection.indexOf('row')===0){d.style.marginRight='14px';}
+      else{d.style.margin='0 0 12px 0';}
+      h.insertBefore(d,h.firstChild);return;}
+    if(++tries<30){setTimeout(mount,200);return;}
+    var fb=build();fb.id='drNavFb';document.body.appendChild(fb);
+  }
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',function(){setTimeout(mount,350);});
+  else setTimeout(mount,350);
+})();
 </script>
 </body>
 </html>
