@@ -88,8 +88,9 @@ body{margin:0;font-family:'Poppins',system-ui,sans-serif;}
     // wait for drNav to have mounted first, so it ends up inside row1 with everything else
     if(!document.querySelector('.drNav') && tries<20){ tries++; setTimeout(mount,200); return; }
     var row1=document.createElement('div');
-    row1.style.cssText='display:flex;align-items:center;justify-content:space-between;flex-wrap:nowrap;gap:16px;width:100%;';
+    row1.style.cssText='display:flex;align-items:center;justify-content:space-between;flex-wrap:nowrap;gap:6px;width:100%;';
     while(h.firstChild) row1.appendChild(h.firstChild);
+    Array.prototype.forEach.call(row1.children, function(c){ c.style.flexShrink='0'; });
     h.appendChild(row1);
     h.appendChild(buildRow());
     h.style.display='flex';
@@ -131,7 +132,7 @@ body{margin:0;font-family:'Poppins',system-ui,sans-serif;}
       if(isB(e))return e;}
     return null;}
   function build(){var d=document.createElement('div');d.className='drNav';
-    d.innerHTML='<a class="home" href="index.html">\u2190 Pagina principală</a>';return d;}
+    d.innerHTML='<a class="home" href="index.html" title="Pagina principal\u0103">\u2190</a>';return d;}
   var tries=0;
   function mount(){
     if(document.querySelector('.drNav'))return;
