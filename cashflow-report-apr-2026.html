@@ -5,7 +5,7 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <meta name="robots" content="noindex,nofollow"/>
-<title>Analiza Cashflow · Iunie 2026 · Dr. Ardeleanu</title>
+<title>April 2026 Cashflow Position · Dr. Ardeleanu</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet"/>
 <style>
 *{box-sizing:border-box;}
@@ -31,7 +31,7 @@ body{margin:0;font-family:'Poppins',system-ui,sans-serif;}
 </head>
 <body>
 <div id="root"></div>
-<script type="module" src="cashflow-report.js?v=20260807c"></script>
+<script type="module" src="cashflow-report-apr-2026.js"></script>
 
 
 <!-- ── TABURI LUNARE: navigare intre rapoartele cashflow desktop (trasabilitate Mar-Iun 2026) ── -->
@@ -49,7 +49,7 @@ body{margin:0;font-family:'Poppins',system-ui,sans-serif;}
 </style>
 <script>
 (function(){
-  var ACTIVE = "jun";
+  var ACTIVE = "apr";
   var MONTHS = [
     {k:'mar',l:'Martie 2026',h:'cashflow-report-mar-2026.html'},
     {k:'apr',l:'Aprilie 2026',h:'cashflow-report-apr-2026.html'},
@@ -96,7 +96,7 @@ body{margin:0;font-family:'Poppins',system-ui,sans-serif;}
 </style>
 <script>
 (function(){
-  var ALT="cashflow-summary.html", ALTLBL="📱 Versiune mobil";
+  var ALT=null, ALTLBL=null;
   var BURG=["123, 28, 22","142, 32, 25","92, 21, 16","101, 21, 17","94, 21, 15"];
   function isB(e){var cs=getComputedStyle(e),s=cs.backgroundColor+" "+cs.backgroundImage;
     for(var i=0;i<BURG.length;i++){if(s.indexOf(BURG[i])>-1)return true;}return false;}
@@ -109,8 +109,7 @@ body{margin:0;font-family:'Poppins',system-ui,sans-serif;}
       if(isB(e))return e;}
     return null;}
   function build(){var d=document.createElement('div');d.className='drNav';
-    d.innerHTML='<a class="home" href="index.html">\u2190 Pagina principală</a>'+
-                '<a class="alt" href="'+ALT+'">'+ALTLBL+'</a>';return d;}
+    d.innerHTML='<a class="home" href="index.html">\u2190 Pagina principală</a>';return d;}
   var tries=0;
   function mount(){
     if(document.querySelector('.drNav'))return;

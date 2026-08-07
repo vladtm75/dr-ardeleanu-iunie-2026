@@ -421,8 +421,7 @@ body{min-height:100vh;}
 <script>
 (function(){
   var HOME_PW = "ArdeleanuIunie";
-  var ALLOWED = ["sales-mobile.html","sales-desktop.html","pl-mobile.html","pl-desktop.html",
-                 "cashflow-summary.html","cashflow-report.html"];
+  var ALLOWED = ["sales-mobile.html","sales-desktop.html","pl-mobile.html","pl-desktop.html","cashflow-summary.html","cashflow-report.html","cashflow-report-mar-2026.html","cashflow-report-apr-2026.html","cashflow-report-may-2026.html"];
   // destinatia ceruta prin link (?next=raport.html) — doar fisiere din lista alba
   var next = null;
   try{
@@ -450,7 +449,10 @@ body{min-height:100vh;}
       "pl-mobile.html":"P&L / EBITDA · Iunie 2026 (mobil)",
       "pl-desktop.html":"P&L / EBITDA · Iunie 2026 (desktop)",
       "cashflow-summary.html":"Cashflow · Iunie 2026 (mobil)",
-      "cashflow-report.html":"Cashflow · Iunie 2026 (desktop)"
+      "cashflow-report.html":"Cashflow · Iunie 2026 (desktop)",
+      "cashflow-report-mar-2026.html":"Cashflow · Martie 2026 (desktop, arhivă)",
+      "cashflow-report-apr-2026.html":"Cashflow · Aprilie 2026 (desktop, arhivă)",
+      "cashflow-report-may-2026.html":"Cashflow · Mai 2026 (desktop, arhivă)"
     };
     var h = gate.querySelector('h3'), pp = gate.querySelector('p');
     if(h) h.textContent = TITLES[next] || 'Rezultate Financiare Iunie 2026';
