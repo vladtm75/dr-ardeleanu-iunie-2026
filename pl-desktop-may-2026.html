@@ -743,12 +743,29 @@ render();
     });
     return row;
   }
+  function removeLegendChips(root){
+    // strips the "Jun 25 Actual / Jun 26 Actual / Jun 26 Budget" legend chips —
+    // a colored dot + label pair, redundant next to the Month/YTD toggle
+    var all = root.querySelectorAll('div');
+    for (var i=0; i<all.length; i++){
+      var e = all[i];
+      if (e.children.length !== 2) continue;
+      var dot = e.children[0], txt = e.children[1];
+      var dotCs = getComputedStyle(dot);
+      var isDot = dot.tagName==='SPAN' && parseInt(dotCs.borderRadius)>=50 &&
+        dot.getBoundingClientRect().width < 14 && dot.getBoundingClientRect().height < 14;
+      if (isDot && txt.tagName==='SPAN' && /Actual|Budget/.test(txt.textContent)){
+        e.parentNode.removeChild(e);
+      }
+    }
+  }
   var tries=0;
   function mount(){
     if(document.querySelector('.'+CLASS))return;
     var h=findHeader();
     if(!h){ if(++tries<40){setTimeout(mount,200);} return; }
     if(!document.querySelector('.drNav') && tries<20){ tries++; setTimeout(mount,200); return; }
+    removeLegendChips(h);
     var row1=document.createElement('div');
     row1.style.cssText='display:flex;align-items:center;justify-content:space-between;flex-wrap:nowrap;gap:6px;width:100%;';
     while(h.firstChild) row1.appendChild(h.firstChild);
