@@ -1242,22 +1242,9 @@ function CashflowDashboard() {
           ]
         }
       ),
-      /* @__PURE__ */ jsxs("footer", { style: {
-        marginTop: 24,
-        paddingTop: 18,
-        borderTop: `1px solid ${C.border}`,
-        display: "flex",
-        justifyContent: "space-between",
-        alignItems: "center",
-        flexWrap: "wrap",
-        gap: 12
-      }, children: [
-        /* @__PURE__ */ jsxs("div", { style: { fontSize: 11, color: C.muted }, children: [
-          /* @__PURE__ */ jsx("strong", { style: { color: C.primary }, children: "Dr. Ardeleanu Dental Clinics" }),
-          " \xB7 Raportare CFO \xB7 Trezorerie & Cashflow \xB7 Perioada: Apr 2025 \u2013 Iun 2026 \xB7 Toate cifrele \u00een RON \xB7 OPCO + PROPCO consolidat"
-        ] }),
-        /* @__PURE__ */ jsx("div", { style: { fontSize: 10, fontWeight: 300, color: C.muted, letterSpacing: 1, textTransform: "uppercase" }, children: "Din 2017 \xB7 clinicileardeleanu.ro" })
-      ] })
+      /* @__PURE__ */ jsx("div", { style: {
+        fontSize: 10.5, color: C.muted, marginTop: 22, textAlign: "center", letterSpacing: 0.2
+      }, children: "Raportare CFO \xB7 Trezorerie & Cashflow \xB7 Perioada: Apr 2025 \u2013 Iun 2026 \xB7 Toate cifrele \u00een RON \xB7 OPCO + PROPCO consolidat" })
       ] })
     ] })
   ] });
