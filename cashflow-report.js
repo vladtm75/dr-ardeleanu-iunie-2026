@@ -284,7 +284,7 @@ function CashflowDashboard() {
     minHeight: "100vh",
     background: C.cream,
     fontFamily: FONT,
-    padding: "0 28px 60px",
+    padding: "0 0 60px",
     color: C.text
   }, children: [
     /* @__PURE__ */ jsx("style", { children: `
@@ -292,13 +292,11 @@ function CashflowDashboard() {
         .recharts-cartesian-axis-tick-value { font-family: ${FONT}; font-size: 11px; fill: ${C.muted}; }
         .recharts-legend-item-text { font-family: ${FONT}; font-size: 12px; color: ${C.text} !important; }
       ` }),
-    /* @__PURE__ */ jsxs("div", { style: { maxWidth: 1280, margin: "0 auto" }, children: [
+    /* @__PURE__ */ jsxs(Fragment, { children: [
       /* @__PURE__ */ jsxs("header", { style: {
         background: C.primary,
         borderRadius: 0,
         padding: "14px 32px",
-        width: "100vw",
-        marginLeft: "calc(50% - 50vw)",
         marginBottom: 18,
         position: "sticky",
         top: 0,
@@ -331,7 +329,7 @@ function CashflowDashboard() {
           letterSpacing: 1.8,
           textTransform: "uppercase"
         }, children: "Realizat Iun 2026" })
-      ] }),
+      ] }),      /* @__PURE__ */ jsxs("div", { style: { maxWidth: 1280, margin: "0 auto", padding: "0 28px" }, children: [
       /* @__PURE__ */ jsxs("div", { style: { display: "flex", gap: 14, marginBottom: 18, flexWrap: "wrap" }, children: [
         /* @__PURE__ */ jsx(
           KPI,
@@ -1259,6 +1257,7 @@ function CashflowDashboard() {
           " \xB7 Raportare CFO \xB7 Trezorerie & Cashflow \xB7 Perioada: Apr 2025 \u2013 Iun 2026 \xB7 Toate cifrele \u00een RON \xB7 OPCO + PROPCO consolidat"
         ] }),
         /* @__PURE__ */ jsx("div", { style: { fontSize: 10, fontWeight: 300, color: C.muted, letterSpacing: 1, textTransform: "uppercase" }, children: "Din 2017 \xB7 clinicileardeleanu.ro" })
+      ] })
       ] })
     ] })
   ] });
