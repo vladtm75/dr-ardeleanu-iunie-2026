@@ -1214,7 +1214,7 @@ function CashflowDashboard() {
                   color: C.terracotta,
                   label: "Vârf (Aug 25)",
                   value: fmtRONfull(682862) + " RON",
-                  sub: "\u20AC136,572 \u2014 extraordinary distribution"
+                  sub: "\u20AC136.572 \u2014 distribu\u021bie extraordinar\u0103"
                 }
               ),
               /* @__PURE__ */ jsx(
@@ -1230,7 +1230,7 @@ function CashflowDashboard() {
                 AggregateBox,
                 {
                   color: C.olive,
-                  label: "12-month total",
+                  label: "Total 12 luni",
                   value: fmtRONfull(DATA.slice(-12).reduce((a, r) => a + r.shSpend, 0)) + " RON",
                   sub: `\u20AC${fmtRONfull(DATA.slice(-12).reduce((a, r) => a + r.shSpendEUR, 0))} \xB7 Iul 25 \u2013 Iun 26`
                 }
