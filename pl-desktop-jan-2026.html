@@ -825,22 +825,12 @@ ReactDOM.createRoot(document.getElementById("root")).render(React.createElement(
 
 
 
-<!-- ── TABURI LUNARE: navigare intre rapoartele EBITDA/P&L desktop (trasabilitate Ian-Iun 2026) ── -->
-<style id="plMonthNavCss">
-.plMonthNav{background:#FFFFFF;border:1px solid #E8DDD0;border-radius:4px;padding:10px 22px;
-  margin:0 auto 18px;max-width:1280px;display:flex;align-items:center;gap:10px;flex-wrap:wrap;
-  font-family:'Poppins',system-ui,-apple-system,sans-serif;box-sizing:border-box;}
-.plMonthNav .lbl{font-size:10px;font-weight:600;letter-spacing:1.6px;text-transform:uppercase;
-  color:#C9A227;margin-right:4px;}
-.plMonthNav a{padding:6px 16px;border-radius:20px;border:1px solid #E8DDD0;background:#FFFFFF;
-  color:#6b5d52;font-size:12px;font-weight:500;text-decoration:none;font-family:inherit;}
-.plMonthNav a.on{border-color:#7B1C16;background:#7B1C16;color:#FFFFFF;font-weight:700;
-  box-shadow:0 2px 6px rgba(123,28,22,.28);}
-@media print{.plMonthNav{display:none;}}
-</style>
+<!-- ── TABURI LUNARE: integrate direct in bara bordo a headerului (nu mai e o bara separata) ── -->
 <script>
 (function(){
   var ACTIVE = "jan";
+  var CLASS = "plMonthRow";
+  var LABEL = "EBITDA / P&L · Rapoarte lunare";
   var MONTHS = [
     {k:'jan',l:'Ianuarie 2026',h:'pl-desktop-jan-2026.html'},
     {k:'feb',l:'Februarie 2026',h:'pl-desktop-feb-2026.html'},
@@ -849,35 +839,54 @@ ReactDOM.createRoot(document.getElementById("root")).render(React.createElement(
     {k:'may',l:'Mai 2026',h:'pl-desktop-may-2026.html'},
     {k:'jun',l:'Iunie 2026',h:'pl-desktop.html'}
   ];
-  function build(){
-    var d=document.createElement('div'); d.className='plMonthNav';
-    var lbl=document.createElement('span'); lbl.className='lbl'; lbl.textContent='EBITDA / P&L · Rapoarte lunare';
-    d.appendChild(lbl);
-    MONTHS.forEach(function(m){
-      var a=document.createElement('a'); a.href=m.h; a.textContent=m.l;
-      if(m.k===ACTIVE) a.className='on';
-      d.appendChild(a);
-    });
-    return d;
-  }
   var BURG=["123, 28, 22","142, 32, 25","92, 21, 16","101, 21, 17","94, 21, 15"];
   function isB(e){var cs=getComputedStyle(e),s=cs.backgroundColor+" "+cs.backgroundImage;
     for(var i=0;i<BURG.length;i++){if(s.indexOf(BURG[i])>-1)return true;}return false;}
   function findHeader(){
     var vw=window.innerWidth,els=document.querySelectorAll('header,div,section');
     for(var i=0;i<els.length;i++){var e=els[i];
-      if(e.className&&(""+e.className).indexOf('plMonthNav')>-1)continue;
       if(e.className&&(""+e.className).indexOf('drNav')>-1)continue;
+      if(e.className&&(""+e.className).indexOf(CLASS)>-1)continue;
       var r=e.getBoundingClientRect();
-      if(r.top>200||r.width<vw*0.4||r.height<36||r.height>200)continue;
+      if(r.top>200||r.width<vw*0.4||r.height<36||r.height>260)continue;
       if(isB(e))return e;}
     return null;}
+  function buildRow(){
+    var row=document.createElement('div');
+    row.className=CLASS;
+    row.style.cssText='display:flex;align-items:center;flex-wrap:wrap;gap:8px;width:100%;margin-top:10px;';
+    var lbl=document.createElement('span');
+    lbl.style.cssText='font-family:"Poppins",system-ui,-apple-system,sans-serif;font-size:9.5px;font-weight:600;letter-spacing:1.6px;text-transform:uppercase;color:#F2DAB7;margin-right:2px;';
+    lbl.textContent=LABEL;
+    row.appendChild(lbl);
+    MONTHS.forEach(function(m){
+      var a=document.createElement('a');
+      a.href=m.h; a.textContent=m.l;
+      var on=(m.k===ACTIVE);
+      a.style.cssText='display:inline-flex;align-items:center;text-decoration:none;'+
+        'font-family:"Poppins",system-ui,-apple-system,sans-serif;font-size:11.5px;font-weight:'+(on?'700':'600')+';'+
+        'letter-spacing:.02em;padding:6px 13px;border-radius:999px;white-space:nowrap;'+
+        (on
+          ? 'background:#F2DAB7;color:#7B1C16;border:1px solid #F2DAB7;'
+          : 'background:rgba(255,255,255,.12);color:#F5EDE3;border:1px solid rgba(242,218,183,.40);');
+      row.appendChild(a);
+    });
+    return row;
+  }
   var tries=0;
   function mount(){
-    if(document.querySelector('.plMonthNav'))return;
+    if(document.querySelector('.'+CLASS))return;
     var h=findHeader();
-    if(h){ h.parentNode.insertBefore(build(), h.nextSibling); return; }
-    if(++tries<40){ setTimeout(mount,200); return; }
+    if(!h){ if(++tries<40){setTimeout(mount,200);} return; }
+    if(!document.querySelector('.drNav') && tries<20){ tries++; setTimeout(mount,200); return; }
+    var row1=document.createElement('div');
+    row1.style.cssText='display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;width:100%;';
+    while(h.firstChild) row1.appendChild(h.firstChild);
+    h.appendChild(row1);
+    h.appendChild(buildRow());
+    h.style.display='flex';
+    h.style.flexDirection='column';
+    h.style.alignItems='stretch';
   }
   if(document.readyState==='loading') document.addEventListener('DOMContentLoaded', function(){ setTimeout(mount,350); });
   else setTimeout(mount,350);
