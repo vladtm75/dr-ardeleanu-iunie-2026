@@ -750,7 +750,7 @@ render();
     if(!h){ if(++tries<40){setTimeout(mount,200);} return; }
     if(!document.querySelector('.drNav') && tries<20){ tries++; setTimeout(mount,200); return; }
     var row1=document.createElement('div');
-    row1.style.cssText='display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;width:100%;';
+    row1.style.cssText='display:flex;align-items:center;justify-content:space-between;flex-wrap:nowrap;gap:16px;width:100%;';
     while(h.firstChild) row1.appendChild(h.firstChild);
     h.appendChild(row1);
     h.appendChild(buildRow());
