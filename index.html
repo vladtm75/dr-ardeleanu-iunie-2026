@@ -300,15 +300,48 @@ body{
 <script>
 (function(){
   var HOME_PW = "ArdeleanuIunie";
-  var gate = document.getElementById('homeGate');
+  var ALLOWED = ["sales-mobile.html","sales-desktop.html","pl-mobile.html","pl-desktop.html",
+                 "cashflow-summary.html","cashflow-report.html"];
+  // destinatia ceruta prin link (?next=raport.html) — doar fisiere din lista alba
+  var next = null;
   try{
-    if(sessionStorage.getItem('reportsAuth')==='1'){ gate.parentNode.removeChild(gate); return; }
+    var m = /[?&]next=([^&]+)/.exec(location.search);
+    if(m){ var c = decodeURIComponent(m[1]).split('/').pop(); if(ALLOWED.indexOf(c)>-1) next = c; }
   }catch(e){}
+
+  var gate = document.getElementById('homeGate');
+  function go(){
+    if(next){ location.replace(next); return true; }
+    return false;
+  }
+  try{
+    if(sessionStorage.getItem('reportsAuth')==='1'){
+      if(go()) return;
+      gate.parentNode.removeChild(gate); return;
+    }
+  }catch(e){}
+
+  // mesaj contextual cand linkul duce catre un raport anume
+  if(next){
+    var TITLES = {
+      "sales-mobile.html":"Vânzări · Iulie 2026 (mobil)",
+      "sales-desktop.html":"Vânzări · Iulie 2026 (desktop)",
+      "pl-mobile.html":"P&L / EBITDA · Iunie 2026 (mobil)",
+      "pl-desktop.html":"P&L / EBITDA · Iunie 2026 (desktop)",
+      "cashflow-summary.html":"Cashflow · Iunie 2026 (mobil)",
+      "cashflow-report.html":"Cashflow · Iunie 2026 (desktop)"
+    };
+    var h = gate.querySelector('h3'), pp = gate.querySelector('p');
+    if(h) h.textContent = TITLES[next] || 'Rezultate Financiare Iunie 2026';
+    if(pp) pp.textContent = 'Introduceți parola pentru a deschide raportul.';
+  }
+
   document.documentElement.style.overflow='hidden';
   window.gateCheck = function(){
     var inp = document.getElementById('gateInput');
     if(inp.value===HOME_PW){
       try{ sessionStorage.setItem('reportsAuth','1'); }catch(e){}
+      if(go()) return;
       document.documentElement.style.overflow='';
       gate.parentNode.removeChild(gate);
     } else {

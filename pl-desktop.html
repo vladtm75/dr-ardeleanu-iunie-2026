@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ro">
 <head>
-<script>if(sessionStorage.getItem("reportsAuth")!=="1"){location.replace("index.html");}</script>
+<script>if(sessionStorage.getItem("reportsAuth")!=="1"){var _f=(location.pathname.split("/").pop()||"");location.replace("index.html?next="+encodeURIComponent(_f));}</script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Dr. Ardeleanu Dental Clinics &middot; CFO Dashboard &middot; Iunie 2026</title>
@@ -31,9 +31,29 @@
   #boot .dots span:nth-child(3){animation-delay:.36s}
   #boot.err h1{color:#cc2200}
 </style>
+
+<style id="navbarCss">
+#drNav{position:fixed;top:0;left:0;right:0;z-index:9997;display:flex;align-items:center;gap:8px;
+  padding:8px 12px;background:rgba(245,237,227,0.95);border-bottom:1px solid #e2d5c6;
+  -webkit-backdrop-filter:saturate(140%) blur(8px);backdrop-filter:saturate(140%) blur(8px);
+  font-family:'Poppins',system-ui,-apple-system,sans-serif;}
+#drNav a{display:inline-flex;align-items:center;gap:6px;text-decoration:none;
+  font-size:12px;font-weight:600;letter-spacing:0.01em;padding:8px 13px;border-radius:999px;
+  -webkit-tap-highlight-color:transparent;white-space:nowrap;}
+#drNav a.home{background:#7B1C16;color:#fff;}
+#drNav a.home:hover{background:#651511;}
+#drNav a.alt{background:transparent;color:#7B1C16;border:1px solid rgba(123,28,22,0.35);}
+#drNav a.alt:hover{background:rgba(123,28,22,0.07);}
+body{padding-top:52px !important;}
+@media print{#drNav{display:none;}body{padding-top:0 !important;}}
+</style>
 </head>
 <body>
 
+<div id="drNav">
+  <a class="home" href="index.html">← Pagina principală</a>
+  <a class="alt" href="pl-mobile.html">📱 Versiune mobil</a>
+</div>
 <div id="root">
   <div id="boot">
     <div class="box">
