@@ -1939,51 +1939,18 @@ function App() {
       {/* Sticky header group: brand header + tabs + period toggle */}
       <div style={{position:'sticky',top:0,zIndex:10,background:P.bg,boxShadow:'0 6px 20px rgba(94,20,16,0.10)'}}>
 
-        {/* Header */}
-        <div style={{background:'linear-gradient(135deg,#8E2019 0%,#7B1C16 42%,#5F1410 100%)',padding:'20px 32px 18px',position:'relative',overflow:'hidden'}}>
-          {/* light bloom */}
-          <div style={{position:'absolute',top:-170,left:-70,width:460,height:340,background:'radial-gradient(ellipse at center,rgba(255,255,255,0.11) 0%,rgba(255,255,255,0) 70%)',pointerEvents:'none'}}/>
-          <div style={{position:'relative',display:'flex',alignItems:'center',justifyContent:'space-between',flexWrap:'wrap',gap:18}}>
-
-            {/* Left — logo + brand identity */}
-            <div style={{display:'flex',alignItems:'center',gap:18}}>
-              <div style={{width:62,height:62,borderRadius:15,overflow:'hidden',background:'#7B1C16',border:'1px solid rgba(201,162,39,0.42)',boxShadow:'0 4px 14px rgba(0,0,0,0.26)',flexShrink:0}}>
-                <img src={LOGO_ADC} alt="Dr. Ardeleanu Dental Clinics" style={{width:'100%',height:'100%',objectFit:'cover',display:'block'}}/>
-              </div>
-              <div style={{borderLeft:'1px solid rgba(242,218,183,0.30)',paddingLeft:18}}>
-                <div style={{fontSize:9.5,fontWeight:600,color:P.amber,letterSpacing:2.4,textTransform:'uppercase',marginBottom:5}}>Sales Performance Dashboard</div>
-                <div style={{fontSize:25,fontWeight:700,color:P.white,lineHeight:1.06,fontFamily:"'Playfair Display',serif"}}>Dr. Ardeleanu <span style={{color:P.wheat}}>Dental Clinics</span></div>
-                <div style={{fontSize:11,fontWeight:300,color:'rgba(255,255,255,0.62)',marginTop:6,letterSpacing:0.2}}>Excelența la prețuri accesibile · Clinica familiei tale</div>
-              </div>
-            </div>
-
-            {/* Right — brand KPIs */}
-            <div style={{display:'flex',gap:9,alignItems:'stretch'}}>
-              {[
-                ['9','Clinici'],
-                ['8','Orașe'],
-                ['30K+','Pacienți/an'],
-                ['4.9★','Google'],
-              ].map(([val,lbl])=>(
-                <div key={lbl} style={{
-                  minWidth:76,textAlign:'center',padding:'10px 12px',borderRadius:10,
-                  background:'rgba(255,255,255,0.07)',border:'1px solid rgba(242,218,183,0.16)',
-                  display:'flex',flexDirection:'column',justifyContent:'center',
-                }}>
-                  <div style={{fontSize:19,fontWeight:800,color:P.white,lineHeight:1,letterSpacing:-0.3}}>{val}</div>
-                  <div style={{fontSize:8.5,fontWeight:500,color:'rgba(242,218,183,0.80)',marginTop:5,letterSpacing:1.1,textTransform:'uppercase'}}>{lbl}</div>
-                </div>
-              ))}
-              <div style={{
-                padding:'10px 16px',borderRadius:10,textAlign:'center',
-                background:'rgba(201,162,39,0.14)',border:'1px solid rgba(201,162,39,0.45)',
-                display:'flex',flexDirection:'column',justifyContent:'center',
-              }}>
-                <div style={{fontSize:12,fontWeight:800,color:P.wheat,letterSpacing:1.6,lineHeight:1}}>DIN 2017</div>
-                <div style={{fontSize:9.5,fontWeight:300,color:'rgba(255,255,255,0.62)',marginTop:5,letterSpacing:0.3}}>{'Ian–'+MONTHS[ACT_MO-1]+' 2026'}</div>
-              </div>
-            </div>
-
+        {/* Header — bara standard (model: raportul EBITDA) */}
+        <div style={{padding:'14px 32px',display:'flex',alignItems:'center',gap:18,flexWrap:'wrap',background:'#7B1C16'}}>
+          <div>
+            <h1 style={{fontFamily:"'Playfair Display',serif",fontSize:21,fontWeight:700,color:'#ffffff',letterSpacing:'-0.01em',display:'flex',alignItems:'center',gap:10,margin:0,lineHeight:1.2}}>
+              {MONTHS[ACT_MO-1]+' 2026 Sales Reporting – Dr. Ardeleanu'}
+              <span style={{background:'rgba(255,255,255,0.18)',borderRadius:6,padding:'2px 9px',fontWeight:600,letterSpacing:'0.04em',fontSize:11,fontFamily:"'Poppins',system-ui"}}>Rețea · 8 clinici</span>
+            </h1>
+          </div>
+          <div style={{marginLeft:'auto',display:'flex',gap:10,alignItems:'center',flexWrap:'wrap'}}>
+            <span style={{background:'#FBE483',color:'#7B1C16',fontSize:10,fontWeight:700,padding:'4px 10px',borderRadius:20,letterSpacing:'0.06em',textTransform:'uppercase'}}>
+              {'Actual '+MONTHS[ACT_MO-1]+' 2026'}
+            </span>
           </div>
         </div>
 

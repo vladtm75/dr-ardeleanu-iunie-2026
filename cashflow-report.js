@@ -284,7 +284,7 @@ function CashflowDashboard() {
     minHeight: "100vh",
     background: C.cream,
     fontFamily: FONT,
-    padding: "24px 28px 60px",
+    padding: "0 28px 60px",
     color: C.text
   }, children: [
     /* @__PURE__ */ jsx("style", { children: `
@@ -295,24 +295,29 @@ function CashflowDashboard() {
     /* @__PURE__ */ jsxs("div", { style: { maxWidth: 1280, margin: "0 auto" }, children: [
       /* @__PURE__ */ jsxs("header", { style: {
         background: C.primary,
-        borderRadius: 4,
-        padding: "16px 26px",
+        borderRadius: 0,
+        padding: "14px 32px",
+        width: "100vw",
+        marginLeft: "calc(50% - 50vw)",
         marginBottom: 18,
+        position: "sticky",
+        top: 0,
+        zIndex: 100,
         display: "flex",
         justifyContent: "space-between",
         alignItems: "center",
         flexWrap: "wrap",
         gap: 16,
-        boxShadow: "0 1px 3px rgba(0,0,0,0.08)"
+        boxShadow: "0 2px 6px rgba(0,0,0,0.06)"
       }, children: [
         /* @__PURE__ */ jsx("h1", { style: {
           fontFamily: "'Playfair Display', serif",
           fontWeight: 700,
-          fontSize: 22,
+          fontSize: 21,
           color: C.white,
           margin: 0,
           lineHeight: 1.2,
-          letterSpacing: 0.2
+          letterSpacing: -0.2
         }, children: "Analiza Cashflow \u00b7 Iunie 2026 \u2013 Dr. Ardeleanu" }),
         /* @__PURE__ */ jsx("div", { style: {
           display: "inline-block",
