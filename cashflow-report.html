@@ -34,12 +34,12 @@ body{margin:0;font-family:'Poppins',system-ui,sans-serif;}
 <script type="module" src="cashflow-report.js?v=20260807c"></script>
 
 
-<!-- ── TABURI LUNARE: integrate direct in bara bordo a headerului (nu mai e o bara separata) ── -->
+<!-- ── TABURI LUNARE: bara alba sub header, stil identic cu "Perioada" din raportul Sales ── -->
 <script>
 (function(){
   var ACTIVE = "jun";
-  var CLASS = "cfMonthRow";
-  var LABEL = "Cashflow · Rapoarte lunare";
+  var CLASS = "cfMonthBar";
+  var LABEL = "RAPOARTE LUNARE";
   var MONTHS = [
     {k:'mar',l:'Martie 2026',h:'cashflow-report-mar-2026.html'},
     {k:'apr',l:'Aprilie 2026',h:'cashflow-report-apr-2026.html'},
@@ -55,47 +55,35 @@ body{margin:0;font-family:'Poppins',system-ui,sans-serif;}
       if(e.className&&(""+e.className).indexOf('drNav')>-1)continue;
       if(e.className&&(""+e.className).indexOf(CLASS)>-1)continue;
       var r=e.getBoundingClientRect();
-      if(r.top>200||r.width<vw*0.4||r.height<36||r.height>260)continue;
+      if(r.top>200||r.width<vw*0.4||r.height<36||r.height>200)continue;
       if(isB(e))return e;}
     return null;}
-  function buildRow(){
-    var row=document.createElement('div');
-    row.className=CLASS;
-    row.style.cssText='display:flex;align-items:center;flex-wrap:wrap;gap:8px;width:100%;margin-top:10px;';
+  function build(){
+    var bar=document.createElement('div');
+    bar.className=CLASS;
+    bar.style.cssText='background:#FFFFFF;border-bottom:1px solid #F0F0F0;padding:9px 28px;display:flex;gap:7px;align-items:center;flex-wrap:wrap;font-family:"Poppins",system-ui,-apple-system,sans-serif;';
     var lbl=document.createElement('span');
-    lbl.style.cssText='font-family:"Poppins",system-ui,-apple-system,sans-serif;font-size:9.5px;font-weight:600;letter-spacing:1.6px;text-transform:uppercase;color:#F2DAB7;margin-right:2px;';
+    lbl.style.cssText='font-size:9px;font-weight:600;color:#C9A227;margin-right:6px;text-transform:uppercase;letter-spacing:1.6px;';
     lbl.textContent=LABEL;
-    row.appendChild(lbl);
+    bar.appendChild(lbl);
     MONTHS.forEach(function(m){
       var a=document.createElement('a');
       a.href=m.h; a.textContent=m.l;
       var on=(m.k===ACTIVE);
-      a.style.cssText='display:inline-flex;align-items:center;text-decoration:none;'+
-        'font-family:"Poppins",system-ui,-apple-system,sans-serif;font-size:11.5px;font-weight:'+(on?'700':'600')+';'+
-        'letter-spacing:.02em;padding:6px 13px;border-radius:999px;white-space:nowrap;'+
-        (on
-          ? 'background:#F2DAB7;color:#7B1C16;border:1px solid #F2DAB7;'
-          : 'background:rgba(255,255,255,.12);color:#F5EDE3;border:1px solid rgba(242,218,183,.40);');
-      row.appendChild(a);
+      a.style.cssText='padding:5px 14px;border-radius:20px;border:1px solid '+(on?'#7B1C16':'#E6E0DA')+';'+
+        'background:'+(on?'#7B1C16':'#FFFFFF')+';color:'+(on?'#FFFFFF':'#5A5A5A')+';'+
+        'box-shadow:'+(on?'0 2px 6px rgba(123,28,22,0.28)':'none')+';'+
+        'font-weight:'+(on?'700':'500')+';font-size:11px;text-decoration:none;font-family:inherit;white-space:nowrap;';
+      bar.appendChild(a);
     });
-    return row;
+    return bar;
   }
   var tries=0;
   function mount(){
     if(document.querySelector('.'+CLASS))return;
     var h=findHeader();
-    if(!h){ if(++tries<40){setTimeout(mount,200);} return; }
-    // wait for drNav to have mounted first, so it ends up inside row1 with everything else
-    if(!document.querySelector('.drNav') && tries<20){ tries++; setTimeout(mount,200); return; }
-    var row1=document.createElement('div');
-    row1.style.cssText='display:flex;align-items:center;justify-content:space-between;flex-wrap:nowrap;gap:6px;width:100%;';
-    while(h.firstChild) row1.appendChild(h.firstChild);
-    Array.prototype.forEach.call(row1.children, function(c){ c.style.flexShrink='0'; });
-    h.appendChild(row1);
-    h.appendChild(buildRow());
-    h.style.display='flex';
-    h.style.flexDirection='column';
-    h.style.alignItems='stretch';
+    if(h && h.parentNode){ h.parentNode.insertBefore(build(), h.nextSibling); return; }
+    if(++tries<40){ setTimeout(mount,200); }
   }
   if(document.readyState==='loading') document.addEventListener('DOMContentLoaded', function(){ setTimeout(mount,350); });
   else setTimeout(mount,350);
