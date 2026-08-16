@@ -1,7 +1,29 @@
 <!DOCTYPE html>
 <html lang="ro">
 <head>
-<script>if(sessionStorage.getItem("reportsAuth")!=="1"){var _f=(location.pathname.split("/").pop()||"");location.replace("index.html?next="+encodeURIComponent(_f));}</script>
+<script>
+(function(){
+  var O="d99606e2666dace30efc2938271ea76816f41c8899bccc31ac26dcc764e0f61c"; var LK="adcAuthSales";
+  function deny(){ var _f=(location.pathname.split("/").pop()||""); location.replace("index.html?next="+encodeURIComponent(_f)); }
+  try{
+    if(sessionStorage.getItem("reportsAuth")==="1") return;
+    if(localStorage.getItem(LK)===O) return;
+    var m=/[#&]k=([^&]+)/.exec(location.hash);
+    if(m && window.crypto && crypto.subtle){
+      document.documentElement.style.visibility='hidden';
+      crypto.subtle.digest('SHA-256', new TextEncoder().encode(decodeURIComponent(m[1]).trim())).then(function(b){
+        var h=Array.prototype.map.call(new Uint8Array(b),function(x){return('0'+x.toString(16)).slice(-2);}).join('');
+        if(h!==O){ deny(); return; }
+        try{ localStorage.setItem(LK,O); }catch(e){}
+        try{ history.replaceState(null,'',location.pathname+location.search); }catch(e){}
+        document.documentElement.style.visibility='';
+      }).catch(deny);
+      return;
+    }
+    deny();
+  }catch(e){ deny(); }
+})();
+</script>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
 <title>Vânzări Lite · Iulie 2026 · Dr. Ardeleanu</title>
