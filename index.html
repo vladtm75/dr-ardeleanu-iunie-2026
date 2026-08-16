@@ -169,6 +169,16 @@ body{
 }
 .actions{display:flex;flex-direction:column;}
 
+/* de la 760px în sus, desktop + mobil stau pe același rând → etichetă scurtă */
+.btn-main .lbl-short{display:none;}
+@media(min-width:760px){
+  .actions-row{display:flex;flex-direction:row;gap:10px;}
+  .actions-row .btn-main{flex:1;margin-top:0;padding:12px 14px;}
+  .actions-row .btn-main .lbl-full{display:none;}
+  .actions-row .btn-main .lbl-short{display:inline;}
+  .actions-row .btn-mobile{flex:1;margin-top:0;}
+}
+
 .share-btn{
   display:flex;align-items:center;justify-content:center;gap:6px;
   margin-top:9px;background:transparent;color:#8a6249;
@@ -303,8 +313,10 @@ body{min-height:100vh;}
       <p>Evoluție lunară 2022–2026 vs buget, mix pe categorii de tratament, comparativ pe clinici, Cluster 1 &amp; 2, fiecare clinică individual, ramp-up &amp; concurență.</p>
       <div class="rule"></div>
       <div class="actions">
-        <a class="btn-main" href="sales-desktop.html"><span>🖥️ Deschide raportul desktop</span><span class="arrow">→</span></a>
-        <a class="btn-mobile" href="sales-mobile.html">📱 Versiune mobil</a>
+        <div class="actions-row">
+          <a class="btn-main" href="sales-desktop.html"><span class="lbl-full">🖥️ Deschide raportul desktop</span><span class="lbl-short">🖥️ Desktop</span><span class="arrow">→</span></a>
+          <a class="btn-mobile" href="sales-mobile.html">📱 Versiune mobil</a>
+        </div>
         <button class="share-btn" type="button" data-share="sales" title="Copiază un link de acces doar la acest raport"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>Partajează doar acest raport</button>
       </div>
     </div>
@@ -316,8 +328,10 @@ body{min-height:100vh;}
       <p>Full P&amp;L grup, analiză cost HQ și clinici, clustere și fiecare clinică, cu toggle Lună/YTD, grafice și tabele de variație.</p>
       <div class="rule"></div>
       <div class="actions">
-        <a class="btn-main" href="pl-desktop.html"><span>🖥️ Deschide raportul desktop</span><span class="arrow">→</span></a>
-        <a class="btn-mobile" href="pl-mobile.html">📱 Versiune mobil</a>
+        <div class="actions-row">
+          <a class="btn-main" href="pl-desktop.html"><span class="lbl-full">🖥️ Deschide raportul desktop</span><span class="lbl-short">🖥️ Desktop</span><span class="arrow">→</span></a>
+          <a class="btn-mobile" href="pl-mobile.html">📱 Versiune mobil</a>
+        </div>
         <button class="share-btn" type="button" data-share="ebitda" title="Copiază un link de acces doar la acest raport"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>Partajează doar acest raport</button>
       </div>
     </div>
@@ -329,8 +343,10 @@ body{min-height:100vh;}
       <p>Cash bridge, traiectorie 15 luni, payables, structură de capital, overdraft, împrumuturi intra-grup și distribuții către acționari, OPCO + PROPCO.</p>
       <div class="rule"></div>
       <div class="actions">
-        <a class="btn-main" href="cashflow-report.html"><span>🖥️ Deschide raportul desktop</span><span class="arrow">→</span></a>
-        <a class="btn-mobile" href="cashflow-summary.html">📱 Versiune mobil</a>
+        <div class="actions-row">
+          <a class="btn-main" href="cashflow-report.html"><span class="lbl-full">🖥️ Deschide raportul desktop</span><span class="lbl-short">🖥️ Desktop</span><span class="arrow">→</span></a>
+          <a class="btn-mobile" href="cashflow-summary.html">📱 Versiune mobil</a>
+        </div>
         <button class="share-btn" type="button" data-share="cashflow" title="Copiază un link de acces doar la acest raport"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>Partajează doar acest raport</button>
       </div>
     </div>
